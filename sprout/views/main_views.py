@@ -1,6 +1,6 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 bp = Blueprint ('main',__name__)
 @bp.route('/')
 def index():
-    return '새싹팀 파이팅'
+    return render_template('main.html')
