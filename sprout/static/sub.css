@@ -8,6 +8,8 @@
 
 /* section_1 */
 .section_1{height: 780px;margin: 0 auto;background-color: blueviolet;}
+
+
 .section_tb{width: 1520px; height: 140px;margin: 0 auto;background-color: aqua;}
 
 /* section_2 */
@@ -20,3 +22,4 @@
 
 /* footer */
 .footer{width: 1520px; height: 350px;margin: 0 auto;}
+
