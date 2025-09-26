@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--bootstrap cdn-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    {% block style %}
-    {% endblock %}
+  <!--bootstrap cdn-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  {% block style %}
+  {% endblock %}
 
-    <title>Interior web</title>
+  <title>Interior web</title>
+
 </head>
+
 <body>
+<!--네비게이션바-->
+{#{% include 'navbar.html' %}#}
+
+<body class="bg-dark">
 <!-- header -->
-<div class="container-fluid bg-primary" style="height:70px;">헤더</div>
-   <!--네비게이션바-->
-{#    {% include 'navbar.html' %}#}
-
-
+<div class="header container-fluid p-3">
+    <p>헤더</p>
+</div>
 
 <!--기본 템플릿 안에 삽입될 내용 start-->
 {% block content %}
@@ -25,10 +29,12 @@
 <!--기본 템플릿 안에 삽입될 내용 end-->
 
 <!-- footer -->
-<div class="container-fluid bg-success" style="height:350px;">푸터</div>
+<div class="footer bg-success">
+    <p>푸터</p>
+</div>
 
 <!--bootstrap js cdn-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js
 "></script>
 </body>
-</html>
+/html>
