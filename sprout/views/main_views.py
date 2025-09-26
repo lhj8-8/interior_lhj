@@ -4,15 +4,3 @@ bp = Blueprint ('main',__name__)
 @bp.route('/')
 def index():
     return render_template('main.html')
-
-@bp.route('/')
-def index():
-    return render_template('login.html')
-
-@bp.route('/')
-def index():
-    return render_template('page1.html')
-
-@bp.route("/sub")
-def sub_page():
-    return render_template("sub.html")
