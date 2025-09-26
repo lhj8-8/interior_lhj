@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='sub.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- section_1 -->
+ <div class="section_1"></div>
+ <div class="section_tb"></div>
+
+<!-- section_2 -->
+ <div class="section_2">
+    <div class="section_2_1"></div>
+    <div class="section_2_2"></div>
+    <div class="section_2_3"></div>
+    <div class="section_2_4"></div>
+ </div>
+{% endblock %}
