@@ -1,0 +1,7 @@
+textarea {
+    width: 100%;
+}
+
+button[type=submit] {
+    margin-top: 10px;
+}
