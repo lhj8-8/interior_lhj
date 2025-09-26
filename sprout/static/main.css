@@ -1,33 +1,20 @@
 
+/* header */
+.header{height: 70px;position: fixed !important; top: 0; left: 0; right: 0;
+        backdrop-filter: blur(10px);color: yellowgreen;}
+.header:hover{height: 70px;position: fixed !important; top: 0; left: 0; right: 0;
+        transition: all 0.8s ease;background-color: azure; color: deeppink;}
 
 /* section_1 */
-.section_1{width: 1520px; height: 1160px;margin: 0 auto;background-color: blueviolet;}
+.section_1{height: 1160px;margin: 0 auto;background-color: gold;}
 .section_tb{width: 1520px; height: 140px;margin: 0 auto;background-color: aqua;}
 
 /* section_2 */
-.section_2{width: 1520px; height: 820px;margin: 0 auto;background-color: palevioletred;}
+.section_2{height: 820px;margin: 0 auto;background-color: palevioletred;}
 
 /* suvslide */
 .suvslide{width: 1520px; height: 350px;margin: 0 auto;background-color: brown;}
 
 
- /*서브페이지로가는 버튼*/
-.btn-container {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #3498db;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-}
+/* footer */
+.footer{width: 1520px; height: 350px;margin: 0 auto;}

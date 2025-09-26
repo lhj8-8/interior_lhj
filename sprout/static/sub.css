@@ -1,8 +1,14 @@
 
+/* header */
+.header{height: 70px;position: fixed !important; top: 0; left: 0; right: 0;
+        backdrop-filter: blur(10px);color: yellowgreen;}
+.header:hover{height: 70px;position: fixed !important; top: 0; left: 0; right: 0;
+        transition: all 0.8s ease;background-color: azure; color: deeppink;}
+
 
 /* section_1 */
-.section_1{width: 1520px; height: 780px;margin: 0 auto;background-color: blueviolet;}
-.section_tb{width: 1520px; height: 140px;margin: 0 auto;}
+.section_1{height: 780px;margin: 0 auto;background-color: blueviolet;}
+.section_tb{width: 1520px; height: 140px;margin: 0 auto;background-color: aqua;}
 
 /* section_2 */
 .section_2{width: 1520px; height: 1640px;margin: 0 auto;background-color: palevioletred;}
@@ -10,3 +16,7 @@
 .section_2_2{width: 100%; height: 400px; margin: 10px 0 0 0; background-color: orange;}
 .section_2_3{width: 100%; height: 400px; margin: 10px 0 0 0; background-color: red;}
 .section_2_4{width: 100%; height: 400px; margin: 10px 0 0 0; background-color: orange;}
+
+
+/* footer */
+.footer{width: 1520px; height: 350px;margin: 0 auto;}
