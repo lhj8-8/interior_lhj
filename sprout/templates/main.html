@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block style %}
+<!--custom css-->
 <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 {% endblock %}
 
@@ -9,8 +10,31 @@
 <div class="section_tb"></div>
 
 <!-- section_2 -->
-<div class="section_2 container-fluid"></div>
+<div class="section_2">
+    <div class="image-slider-container">
+        <div class="slider-wrapper" id="sliderWrapper">
+            <!-- Before 이미지 (빈 방) -->
+            <img src="{{ url_for('static', filename='image/after.png') }}" alt="After" class="before-image">
+
+            <!-- After 이미지 (가구가 있는 방) -->
+            <img src="{{ url_for('static', filename='image/before.png') }}" alt="Before" class="after-image" id="afterImage">
+
+            <!-- 슬라이더 구분선 -->
+            <div class="slider-divider" id="sliderDivider"></div>
+
+            <!-- 슬라이더 핸들 -->
+            <div class="slider-handle" id="sliderHandle"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- suvslide -->
 <div class="suvslide"></div>
+{% endblock %}
+
+{% block scripts %}
+<!--custom js-->
+<script src="{{ url_for('static', filename='js.js') }}"></script>
 {% endblock %}
