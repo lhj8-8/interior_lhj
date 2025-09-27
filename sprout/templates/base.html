@@ -13,14 +13,23 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
 <!--네비게이션바-->
 {#{% include 'navbar.html' %}#}
 
-<body class="bg-dark">
 <!-- header -->
 <div class="header container-fluid p-3">
-    <p>헤더</p>
+    <p class="position-absolute top-50 start-50 translate-middle">헤더</p>
+    <div class="position-absolute top-50 start-100 translate-middle"
+         style="height: 70px; width: 700px;">
+        <ol class="row list-unstyled">
+            <li class="col-auto my-4"><a href="">메뉴1</a></li>
+            <li class="col-auto my-4"><a href="">메뉴2</a></li>
+            <li class="col-auto my-4"><a href="">메뉴3</a></li>
+            <li class="col-auto my-4"><a href="">메뉴4</a></li>
+            <li class="col-auto my-4"><a href="">메뉴5</a></li>
+        </ol>
+    </div>
 </div>
 
 <!--기본 템플릿 안에 삽입될 내용 start-->
@@ -37,4 +46,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js
 "></script>
 </body>
-/html>
+</html>

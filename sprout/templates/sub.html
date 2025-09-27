@@ -1,6 +1,4 @@
 {% extends 'base.html' %}
-
-
 {% block style %}
     <link rel="stylesheet" href="{{ url_for('static', filename='sub.css') }}">
     <!-- 부트스트랩 기본 CSS로 드롭다운 화살표 회전 효과 -->
@@ -8,6 +6,7 @@
         .dropdown-toggle::after {
             transition: transform 0.15s ease-in-out;
         }
+
         .dropdown-toggle[aria-expanded="true"]::after {
             transform: rotate(180deg);
         }
