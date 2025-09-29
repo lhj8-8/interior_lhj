@@ -27,6 +27,41 @@ html, body {
     z-index: 1000;
 }
 
+/* header 내부에 a 태그 색상 변경 */
+.header a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #000;
+  text-decoration: none;
+}
+
+/* header 내부에 아이콘 크기 및 정렬 */
+.header a i {
+  font-size: 22px;
+}
+
+/* offcanvas 슬라이드 패널*/
+
+/* Offcanvas custom size* */
+.offcanvas {
+    width: 500px
+    z-index: 1050; /* 오버레이보다 레이어 위 */
+}
+
+/* 패널 열려도 스크롤 허용 */
+body.offcanvas-open {
+    overflow: auto;
+    padding-right: 0;
+}
+
+/* 흰색 배경 */
+.offcanvas-header,
+.offcanvas-body {
+    background-color: white;
+    color: black;
+}
+
 /* section_1 */
 .section_1 {
     height: 1160px;
@@ -50,7 +85,7 @@ html, body {
     background: #fff;
 }
 
-/* 슬라이드 컨테이너 */
+/* 전/후 슬라이드 컨테이너 */
 .image-slider-container {
     position: absolute;
     inset: 0;
