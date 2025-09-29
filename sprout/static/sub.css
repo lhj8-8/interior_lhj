@@ -8,45 +8,42 @@
 
 /* section_1 */
 .section_1{height: 780px;margin: 0 auto;background-color: blueviolet;}
-
-
 .section_tb{width: 1520px; height: 140px;margin: 0 auto;}
-    /*section_tb*/
-    /* 드롭다운 화살표 회전 효과 */
-    .dropdown-toggle::after {
-        transition: transform 0.15s ease-in-out;
-    }
+        /* 드롭다운 화살표 회전 효과 */
+        .dropdown-toggle::after {
+            transition: transform 0.15s ease-in-out;
+        }
 
-    .dropdown-toggle[aria-expanded="true"]::after {
-        transform: rotate(180deg);
-    }
+        .dropdown-toggle[aria-expanded="true"]::after {
+            transform: rotate(180deg);
+        }
 
-    /* 메뉴 버튼 항상 보이게 */
-    .menu-btn {
-        display: inline-block !important;
-        border: 1px solid #dee2e6;
-        background-color: white;
-    }
+        /* 메뉴 버튼 항상 보이게 */
+        .menu-btn {
+            display: inline-block !important;
+            border: 1px solid #dee2e6;
+            background-color: white;
+        }
 
-    .menu-btn:hover {
-        background-color: #f8f9fa;
-    }
+        .menu-btn:hover {
+            background-color: #f8f9fa;
+        }
 
-    /* 접히는 메뉴가 자연스럽게 공간 차지하도록 */
-    .section_tb {
-        position: relative;
-        z-index: 1;
-    }
+        /* 접히는 메뉴가 자연스럽게 공간 차지하도록 */
+        .section_tb {
+            position: relative;
+            z-index: 1;
+        }
 
-    #menuContent {
-        transition: all 0.3s ease-in-out;
-    }
+        #menuContent {
+            transition: all 0.3s ease-in-out;
+        }
 
-    /* 아래 섹션들이 메뉴에 가려지지 않도록 */
-    .section_2 {
-        position: relative;
-        z-index: 0;
-    }
+        /* 아래 섹션들이 메뉴에 가려지지 않도록 */
+        .section_2 {
+            position: relative;
+            z-index: 0;
+        }
 
 /* section_2 */
 .section_2{width: 1520px; height: 1640px;margin: 0 auto;background-color: palevioletred;}
@@ -58,4 +55,3 @@
 
 /* footer */
 .footer{width: 1520px; height: 350px;margin: 0 auto;}
-
