@@ -8,7 +8,9 @@
 
 /* section_1 */
 .section_1{height: 780px;margin: 0 auto;background-color: blueviolet;}
-.section_tb{width: 1520px; height: 140px;margin: 0 auto;background-color: aqua;}
+.section_tb{width: 1520px; height: 140px;margin: 0 auto;}
+
+
 
 /* section_2 */
 .section_2{width: 1520px; height: 1640px;margin: 0 auto;background-color: palevioletred;}
