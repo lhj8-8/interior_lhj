@@ -1,40 +1,23 @@
+    // 카테고리 토글 버튼 화살표 회전 기능
+    document.addEventListener('DOMContentLoaded', function() {
+        // 모든 카테고리 토글 버튼 선택
+        const categoryToggles = document.querySelectorAll('.category-toggle');
 
-        // 드롭다운 아이콘 회전 효과
-        document.addEventListener('shown.bs.dropdown', function (event) {
-            const icon = event.target.querySelector('.bi-chevron-down');
-            if (icon) {
-                icon.style.transform = 'rotate(180deg)';
+        categoryToggles.forEach(function(toggle) {
+            // 연결된 collapse 요소 찾기
+            const targetId = toggle.getAttribute('data-bs-target');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // collapse가 보일 때 이벤트
+                targetElement.addEventListener('show.bs.collapse', function() {
+                    toggle.setAttribute('aria-expanded', 'true');
+                });
+
+                // collapse가 숨겨질 때 이벤트
+                targetElement.addEventListener('hide.bs.collapse', function() {
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
             }
         });
-
-        document.addEventListener('hidden.bs.dropdown', function (event) {
-            const icon = event.target.querySelector('.bi-chevron-down');
-            if (icon) {
-                icon.style.transform = 'rotate(0deg)';
-            }
-        });
-
-        // 필터 함수들
-        function resetStyleFilters() {
-            document.querySelectorAll('input[name="style"]').forEach(input => input.checked = false);
-        }
-
-        function applyStyleFilters() {
-            console.log('스타일 필터 적용');
-        }
-
-        function resetColorFilters() {
-            document.querySelectorAll('input[name="color"]').forEach(input => input.checked = false);
-        }
-
-        function applyColorFilters() {
-            console.log('색상 필터 적용');
-        }
-
-        function resetBrandFilters() {
-            document.querySelectorAll('input[name="brand"]').forEach(input => input.checked = false);
-        }
-
-        function applyBrandFilters() {
-            console.log('브랜드 필터 적용');
-        }
+    });
