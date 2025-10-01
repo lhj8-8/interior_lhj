@@ -1,178 +1,141 @@
- <head>
-  <style>
-        body {
-            font-family: Arial, sans-serif;
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        * {
             margin: 0;
-            padding: 20px;
-            min-height: 200vh; /* 스크롤 테스트용 */
-        }
-
-        /* 메뉴 버튼 고정 스타일 */
-        .slide-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            z-index: 1000;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .slide-toggle:hover {
-            background: #0056b3;
-        }
-
-        .slide-toggle.hidden {
-            opacity: 0;
-            transform: translateY(-10px);
-            pointer-events: none;
-        }
-
-        /* 오버레이 */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: none;
-            z-index: 998;
-        }
-
-        .overlay.active {
-            display: block;
-        }
-
-        /* 슬라이드 패널 */
-        .slide-panel {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 300px;
-            height: 100%;
-            background: white;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
-            transition: right 0.3s ease;
-            z-index: 999;
-        }
-
-        .slide-panel.active {
-            right: 0;
-        }
-
-        .slide-panel-content {
-            padding: 20px;
-        }
-
-        .slide-panel-content h2 {
-            margin-top: 0;
-        }
-
-        .slide-panel-content ul {
-            list-style: none;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        .slide-panel-content li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #555;
             cursor: pointer;
         }
 
-        .slide-panel-content li:hover {
-            background-color: #f5f5f5;
+        .options a {
+            text-decoration: none;
+            color: #667eea;
         }
 
-
-        /* 데모 콘텐츠 */
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
-        h1 {
-            margin-bottom: 30px;
+        .login-btn:hover {
+            background: linear-gradient(135deg, #5a6fd6, #6b3d91);
         }
 
-        .section {
-            background: #f8f9fa;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+        .signup-link {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
         }
     </style>
-</head>
-<body>
-    <!-- 슬라이드 토글 버튼 -->
-    <button class="slide-toggle" id="slideToggle">메뉴</button>
 
-    <!-- 오버레이 -->
-    <div class="overlay" id="overlay"></div>
+    <body>
+    <div class="login-container">
+        {% include 'form_errors.html' %}
+        <h2>로그인</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" placeholder="이메일을 입력하세요" required/>
+            </div>
+            <div class="form-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" placeholder="비밀번호를 입력하세요" required/>
+            </div>
+            <div class="options">
+                <label>
+                    <input type="checkbox"/> 로그인 상태 유지
+                </label>
+                <a href="#">비밀번호 찾기</a>
+            </div>
+            <button type="submit" class="login-btn">로그인</button>
+        </form>
+        <div class="signup-link">
+            계정이 없으신가요? <a href="{{ url_for('auth.signup') }} ">회원가입</a>
+        </div>
+    </div>
+    </body>
 
-    <!-- 오른쪽 슬라이드 패널 -->
-    <div class="slide-panel" id="slidePanel">
-        <div class="slide-panel-content">
-            <h2>슬라이드 패널</h2>
-            <p>여기에 원하는 내용을 넣으세요.</p>
-            <ul>
-                <li>메뉴 1</li>
-                <li>메뉴 2</li>
-                <li>메뉴 3</li>
-            </ul>
-
-
-
-    <!-- 메인 콘텐츠 -->
-
-    <script>
-        const slideToggle = document.getElementById('slideToggle');
-        const slidePanel = document.getElementById('slidePanel');
-        const overlay = document.getElementById('overlay');
-        const menu1 = document.getElementById('menu1');
-        const loginForm = document.getElementById('loginForm');
-        const backBtn = document.getElementById('backBtn');
-        const menuList = document.querySelector('.slide-panel-content ul');
-        const panelDescription = document.querySelector('.slide-panel-content p');
-
-        let isPanelOpen = false;
-
-        // 슬라이드 패널 토글
-        function togglePanel() {
-            isPanelOpen = !isPanelOpen;
-
-            slidePanel.classList.toggle('active', isPanelOpen);
-            overlay.classList.toggle('active', isPanelOpen);
-        }
-
-        // 스크롤 이벤트 - 메뉴 버튼 숨기기/보이기
-        window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (currentScroll <= 50) {
-                // 최상단 근처(50px 이내)에서만 보이기
-                slideToggle.classList.remove('hidden');
-            } else {
-                // 50px 이상 스크롤하면 항상 숨기기
-                slideToggle.classList.add('hidden');
-            }
-        });
-
-        // 이벤트 리스너
-        slideToggle.addEventListener('click', togglePanel);
-        overlay.addEventListener('click', togglePanel);
-
-
-        // ESC 키로 패널 닫기
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && isPanelOpen) {
-                togglePanel();
-            }
-        });
-    </script>
-</body>
+{% endblock %}
