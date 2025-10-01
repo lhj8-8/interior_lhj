@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+    <body class="bg-dark">
     <!-- section_1 -->
     <div id="carouselExampleDark" class="carousel carousel-dark slide container-fluid">
         <div class="carousel-indicators">
@@ -52,7 +53,7 @@
     <!-- section_2 -->
     <div class="section_2">
         <div class="image-slider-container">
-            <div class="slider-wrapper" id="sliderWrapper">
+            <div class="slider-wrapper bg-dark" id="sliderWrapper">
                 <!-- Before 이미지 (빈 방) -->
                 <img src="{{ url_for('static', filename='image/after.png') }}" alt="After" class="before-image">
 
@@ -73,6 +74,7 @@
 
     <!-- suvslide -->
     <div class="suvslide"></div>
+    </body>
 {% endblock %}
 
 {% block scripts %}
