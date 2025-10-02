@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block style %}
-<link rel="stylesheet" href="{{ url_for('static', filename='sub.css') }}">
-{% endblock %}
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='sub.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sub.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sub.js') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+
+{% endblock %}
 {% block content %}
 
 <body style="background-color: #1a1a1a">
@@ -27,10 +31,36 @@
                             <i class="bi bi-search"></i>
                         </button>
                     </form>
+                  
+    <body style="background-color: #1a1a1a">
+    <!-- section_1 -->
+    <div class="section_1 container-fluid"></div>
+
+    <div class="section_tb">
+
+        <!-- 메인 메뉴 네비게이션 -->
+        <nav class="navbar navbar-light bg-white border-bottom py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <!-- 왼쪽: 전체 메뉴 -->
+                    <div class="d-flex align-items-center">
+                        <a class="nav-link active fw-bold" href="#" style="border-bottom: 2px solid #333;">전체</a>
+                    </div>
+
+                    <!-- 오른쪽: 메뉴 토글 버튼 -->
+                    <div>
+                        <button class="btn btn-outline-secondary menu-btn" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#menuContent"
+                                aria-expanded="false"
+                                aria-controls="menuContent">
+                            <i class="bi bi-list"></i> 메뉴
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <!-- 서브 네비게이션 (스타일, 색상, 브랜드, 정렬) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom py-2">
@@ -247,4 +277,16 @@
 {% endblock %}
 {% block script %}
 <script src="{{ url_for('static', filename='sub.js') }}"></script>
+
+    <!-- section_2 -->
+    <div class="section_2">
+        <div class="section_2_1"></div>
+        <div class="section_2_2"></div>
+        <div class="section_2_3"></div>
+        <div class="section_2_4"></div>
+    </div>
+    </body>
+
+{% endblock %}
+{% block script %}
 {% endblock %}

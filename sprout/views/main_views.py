@@ -65,7 +65,6 @@ def get_products_with_pagination(page):
 
     return ProductPagination(current_products, page, per_page, total)
 
-
 @bp.route('/')
 def index():
     """메인 페이지 - 제품 목록"""
@@ -80,3 +79,9 @@ def products():
     page = request.args.get('page', 1, type=int)
     product_list = get_products_with_pagination(page)
     return render_template('sub.html', product_list=product_list)
+
+bp = Blueprint ('main',__name__, url_prefix='/')
+@bp.route('/')
+def index():
+    return render_template('main.html')
+
