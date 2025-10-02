@@ -37,3 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
  /* 초기 슬라이더 위치 */
   setPct(50);
 });
+
+       // 스크롤 이벤트 리스너
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+
+            // 각 행마다 다른 속도와 방향으로 이동
+            const row1 = document.getElementById('row1');
+            const row2 = document.getElementById('row2');
+            const row3 = document.getElementById('row3');
+
+            // 첫 번째 행: 왼쪽으로 이동 (음수)
+            row1.style.transform = `translateX(-${scrolled * 0.3}px)`;
+
+            // 두 번째 행: 오른쪽으로 이동 (양수)
+            row2.style.transform = `translateX(${scrolled * 0.25}px)`;
+
+            // 세 번째 행: 왼쪽으로 이동 (음수, 더 빠르게)
+            row3.style.transform = `translateX(-${scrolled * 0.35}px)`;
+        });
+
+        // 페이지 로드 시 초기 위치 설정
+        window.addEventListener('load', () => {
+            document.getElementById('row1').style.transform = 'translateX(0px)';
+            document.getElementById('row2').style.transform = 'translateX(0px)';
+            document.getElementById('row3').style.transform = 'translateX(0px)';
+        });
