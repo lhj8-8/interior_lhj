@@ -16,7 +16,7 @@
     <title>Interior web</title>
 </head>
 
-<body class="bg-dark">
+<body>
 <!--네비게이션바-->
 {#{% include 'navbar.html' %}#}
 
@@ -70,7 +70,7 @@
 
         <hr class="my-4">
 
-        <div class="d-grid gap-2">
+        <div class="clicks d-grid gap-2">
             <button class="btn btn-outline-primary" type="button"><a href="{{ url_for('auth.login') }}">로그인</a></button>
             <button class="btn btn-outline-secondary" type="button"><a href="">마이페이지</a></button>
         </div>
@@ -83,8 +83,8 @@
 <!--기본 템플릿 안에 삽입될 내용 end-->
 
 <!-- footer -->
-    <footer class="footer">
-        <div class="footer-container">
+    <footer class="footer bg-dark container-fluid">
+        <div class="footer-container" style="padding-top: 40px;">
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="logo">

@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container">
-        <h5 class="my-3 border-bottom pb-2">회원 가입</h5>
+    {% include 'form_errors.html' %}
+    <div class="container" style="height: 900px; " bg-light>
+        <h5 class="mb-30 mx-auto p-2">회원 가입</h5>
         <form method="post">
-            {% include 'form_errors.html' %}
-            <div class="mb-3">
-                <label for="username">사용자 이름</label>
+            <div class="mb-20 mx-auto p-2" style="width: 330px;">
+                <label for="username">*사용자 이름</label>
                 <input type="text" name="username" id="username" class="form-control"
                        value="{{ form.username.data or '' }}">
             </div>
-            <div class="mb-3">
-                <label for="password1">비밀번호</label>
+            <div class="mb-20 mx-auto p-2" style="width: 330px;">
+                <label for="password1">*비밀번호</label>
                 <input type="password" name="password1" id="password1" class="form-control"
                        value="{{ form.password1.data or '' }}">
             </div>
-            <div class="mb-3">
-                <label for="password2">비밀번호</label>
+            <div class="mb-20 mx-auto p-2" style="width: 330px;">
+                <label for="password2">*비밀번호 확인</label>
                 <input type="password" name="password2" id="password2" class="form-control"
                        value="{{ form.password2.data or '' }}">
             </div>
-            <div class="mb-3">
+            <div class="mb-20 mx-auto p-2" style="width: 330px;">
                 <label for="email">이메일</label>
                 <input type="email" name="email" id="email" class="form-control"
                        value="{{ form.email.data or '' }}">

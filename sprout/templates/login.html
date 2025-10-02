@@ -1,115 +1,114 @@
 {% extends 'base.html' %}
 {% block content %}
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
 
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;sk
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        .login-container {
-            background: #fff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-            width: 100%;
-            max-width: 380px;
-        }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffffff, #ffffff);
+    }
 
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #333;
-        }
+    .login-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+      width: 100%;
+      max-width: 380px;
+    }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 16px;
+      color: #333;
+    }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #555;
-            font-size: 14px;
-        }
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: border 0.2s;
-        }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-size: 14px;
+    }
 
-        .form-group input:focus {
-            border-color: #667eea;
-            outline: none;
-        }
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border 0.2s;
+    }
 
-        .options {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
+    .form-group input:focus {
+      border-color: #667eea;
+      outline: none;
+    }
 
-        .options label {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #555;
-            cursor: pointer;
-        }
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
 
-        .options a {
-            text-decoration: none;
-            color: #667eea;
-        }
+    .options label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #555;
+      cursor: pointer;
+    }
 
-        .login-btn {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: #fff;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
+    .options a {
+      text-decoration: none;
+      color: #667eea;
+    }
 
-        .login-btn:hover {
-            background: linear-gradient(135deg, #5a6fd6, #6b3d91);
-        }
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background:rgb(0, 0, 0);
+      color:#ffffff;
+      border-radius:8px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition:background 0.3s;
+    }
 
-        .signup-link {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 14px;
-        }
 
-        .signup-link a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .signup-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
 
-        .signup-link a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .signup-link a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 
     <body>
     <div class="login-container">
@@ -133,7 +132,7 @@
             <button type="submit" class="login-btn">로그인</button>
         </form>
         <div class="signup-link">
-            계정이 없으신가요? <a href="{{ url_for('auth.signup') }} ">회원가입</a>
+            계정이 없으신가요? <a href="{{ url_for('auth.signup') }}">회원가입</a>
         </div>
     </div>
     </body>
