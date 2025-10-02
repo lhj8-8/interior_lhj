@@ -18,10 +18,11 @@
 
 <body>
 <!--네비게이션바-->
-{#{% include 'navbar.html' %}#}
+
 
 <!-- header -->
 <div class="header container-fluid p-3">
+    {% include 'navbar.html' %}
     <p class="position-absolute top-50 start-50 translate-middle">헤더</p>
     <div class="position-absolute top-50 start-100 translate-middle"
          style="height: 70px; width: 700px;">
@@ -83,7 +84,7 @@
 <!--기본 템플릿 안에 삽입될 내용 end-->
 
 <!-- footer -->
-    <footer class="footer bg-dark container-fluid">
+    <footer class="footer container-fluid" style="background-color: #1a1a1a">
         <div class="footer-container" style="padding-top: 40px;">
             <div class="footer-top">
                 <div class="footer-brand">

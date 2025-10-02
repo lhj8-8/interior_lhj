@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <body class="bg-dark">
+    <body style="background-color: #1a1a1a">
     <!-- section_1 -->
     <div id="carouselExampleDark" class="carousel carousel-dark slide container-fluid">
         <div class="carousel-indicators">
@@ -48,12 +48,20 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="section_tb"></div>
+    <div class="section_tb">
+        <div style="background-color: #1a1a1a; padding: 40px 60px; margin: 0;">
+            <h2 style="color: white; margin: 20px; text-align: center;">인테리어의 새로운 경험</h2>
+            <p style="color: white; line-height: 1.6; text-align: center; max-width: 800px; margin: 0 auto;">
+                AI 기술을 활용하여 당신의 공간을 완벽하게 변화시켜보세요.
+                빈 방에서 시작하여 원하는 스타일의 인테리어를 미리 확인할 수 있습니다.
+            </p>
+        </div>
+    </div>
 
     <!-- section_2 -->
     <div class="section_2">
         <div class="image-slider-container">
-            <div class="slider-wrapper bg-dark" id="sliderWrapper">
+            <div class="slider-wrapper" style="background-color: #1a1a1a" id="sliderWrapper">
                 <!-- Before 이미지 (빈 방) -->
                 <img src="{{ url_for('static', filename='image/after.png') }}" alt="After" class="before-image">
 
@@ -70,10 +78,133 @@
             </div>
         </div>
     </div>
-    </div>
 
     <!-- suvslide -->
-    <div class="suvslide"></div>
+    <div class="suvslide">
+        <!-- 첫 번째 행 (왼쪽으로 이동) -->
+        <div class="parallax-section">
+            <div class="image-row" id="row1">
+                <div class="image-card">
+                    <img src=""
+                         alt="Living Room 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Kitchen 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bedroom 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Dining 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Office 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bathroom 1">
+                </div>
+            </div>
+        </div>
+
+        <!-- 두 번째 행 (오른쪽으로 이동) -->
+        <div class="parallax-section">
+            <div class="image-row" id="row2">
+                <div class="image-card">
+                    <img src=""
+                         alt="Living Room 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Kitchen 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bedroom 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Dining 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Office 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bathroom 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- 세 번째 행 (왼쪽으로 이동) -->
+        <div class="parallax-section">
+            <div class="image-row" id="row3">
+                <div class="image-card">
+                    <img src=""
+                         alt="Living Room 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Kitchen 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bedroom 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Dining 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Office 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bathroom 3">
+                </div>
+            </div>
+        </div>
+    </div>
+    {#suvslide 끝#}
+
+    {#section_3#}
+    <div class="section_3"></div>
+
+    {#suvslide_javascript#}
+    <script>
+        // 스크롤 이벤트 리스너
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+
+            // 각 행마다 다른 속도와 방향으로 이동
+            const row1 = document.getElementById('row1');
+            const row2 = document.getElementById('row2');
+            const row3 = document.getElementById('row3');
+
+            // 첫 번째 행: 왼쪽으로 이동 (음수)
+            row1.style.transform = `translateX(-${scrolled * 0.3}px)`;
+
+            // 두 번째 행: 오른쪽으로 이동 (양수)
+            row2.style.transform = `translateX(${scrolled * 0.25}px)`;
+
+            // 세 번째 행: 왼쪽으로 이동 (음수, 더 빠르게)
+            row3.style.transform = `translateX(-${scrolled * 0.35}px)`;
+        });
+
+        // 페이지 로드 시 초기 위치 설정
+        window.addEventListener('load', () => {
+            document.getElementById('row1').style.transform = 'translateX(0px)';
+            document.getElementById('row2').style.transform = 'translateX(0px)';
+            document.getElementById('row3').style.transform = 'translateX(0px)';
+        });
+    </script>
+
     </body>
 {% endblock %}
 

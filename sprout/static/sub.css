@@ -1,57 +1,244 @@
-
 /* header */
-.header{height: 70px;position: fixed !important; top: 0; left: 0; right: 0;
-        backdrop-filter: blur(10px);color: yellowgreen;}
-.header:hover{height: 70px;position: fixed !important; top: 0; left: 0; right: 0;
-        transition: all 0.8s ease;background-color: azure; color: deeppink;}
+.header {
+    height: 70px;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    color: yellowgreen;
+}
+
+.header:hover {
+    height: 70px;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.8s ease;
+    background-color: azure;
+    color: deeppink;
+}
 
 
 /* section_1 */
-.section_1{height: 780px;margin: 0 auto;background-color: blueviolet;}
-.section_tb{width: 1520px; height: 140px;margin: 0 auto;}
-        /* 드롭다운 화살표 회전 효과 */
-        .dropdown-toggle::after {
-            transition: transform 0.15s ease-in-out;
-        }
+.section_1 {
+    height: 780px;
+    margin: 0 auto;
+    background-color: blueviolet;
+}
 
-        .dropdown-toggle[aria-expanded="true"]::after {
-            transform: rotate(180deg);
-        }
+.section_tb {
+    width: 1520px;
+    height: 140px;
+    margin: 0 auto;
+    background-color: #10B981;
+}
 
-        /* 메뉴 버튼 항상 보이게 */
-        .menu-btn {
-            display: inline-block !important;
-            border: 1px solid #dee2e6;
-            background-color: white;
-        }
+/* 드롭다운 화살표 회전 효과 */
+.dropdown-toggle::after {
+    transition: transform 0.15s ease-in-out;
+}
 
-        .menu-btn:hover {
-            background-color: #f8f9fa;
-        }
+.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
 
-        /* 접히는 메뉴가 자연스럽게 공간 차지하도록 */
-        .section_tb {
-            position: relative;
-            z-index: 1;
-        }
+/* 메뉴 버튼 항상 보이게 */
+.menu-btn {
+    display: inline-block !important;
+    border: 1px solid #dee2e6;
+    background-color: white;
+}
 
-        #menuContent {
-            transition: all 0.3s ease-in-out;
-        }
+.menu-btn:hover {
+    background-color: #f8f9fa;
+}
 
-        /* 아래 섹션들이 메뉴에 가려지지 않도록 */
-        .section_2 {
-            position: relative;
-            z-index: 0;
-        }
+/* 접히는 메뉴가 자연스럽게 공간 차지하도록 */
+.section_tb {
+    position: relative;
+    z-index: 1;
+}
+
+#menuContent {
+    transition: all 0.3s ease-in-out;
+}
+
+/* 아래 섹션들이 메뉴에 가려지지 않도록 */
+.section_2 {
+    position: relative;
+    z-index: 0;
+}
 
 /* section_2 */
-.section_2{width: 1520px; height: 1640px;margin: 0 auto;background-color: palevioletred;}
-.section_2_1{width: 100%; height: 400px; margin: 10px 0 0 0; background-color: red;}
-.section_2_2{width: 100%; height: 400px; margin: 10px 0 0 0; background-color: orange;}
-.section_2_3{width: 100%; height: 400px; margin: 10px 0 0 0; background-color: red;}
-.section_2_4{width: 100%; height: 400px; margin: 10px 0 0 0; background-color: orange;}
+.section_2 {
+    width: 1520px;
+    height: 1640px;
+    margin: 0 auto;
+    background-color: palevioletred;
+}
+
+.section_2_1 {
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    background-color: red;
+}
+
+.section_2_2 {
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    background-color: orange;
+}
+
+.section_2_3 {
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    background-color: red;
+}
+
+.section_2_4 {
+    width: 100%;
+    height: 400px;
+    margin: 10px 0 0 0;
+    background-color: orange;
+}
 
 
 /* footer */
-.footer{width: 1520px; height: 350px;margin: 0 auto;}
+.footer {
+    /*width: 1520px;*/
+    /*height: 350px;*/
+    margin: 0 auto;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.footer-container {
+    width: 1500px;
+    margin: 0 auto;
+    padding: 5px 50px 15px 50px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.footer-brand {
+    flex: 0 0 200px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #eee;
+}
+
+.footer-links {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.footer-links a{
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #eee;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 100px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.footer-column {
+    min-width: 120px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #eee;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #eee;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-info {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}
