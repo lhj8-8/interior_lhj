@@ -4,13 +4,13 @@ from wtforms.fields.simple import StringField, TextAreaField, PasswordField, Ema
 from wtforms.validators import DataRequired, Length, EqualTo, Email
 
 
-class QuestionForm(FlaskForm):
-    subject=StringField('제목',validators=[DataRequired('제목은 필수 입력 항목입니다.')])
-    content=TextAreaField('내용',validators=[DataRequired('내용은 필수 입력 항목입니다.')])
-    image = FileField('이미지 업로드', validators=[FileAllowed(['jpg','png','jpeg', 'gif'])])
-
-class AnswerForm(FlaskForm):
-    content=TextAreaField('내용',validators=[DataRequired('내용은 필수 입력 항목 입니다.')])
+# class QuestionForm(FlaskForm):
+#     subject=StringField('제목',validators=[DataRequired('제목은 필수 입력 항목입니다.')])
+#     content=TextAreaField('내용',validators=[DataRequired('내용은 필수 입력 항목입니다.')])
+#     image = FileField('이미지 업로드', validators=[FileAllowed(['jpg','png','jpeg', 'gif'])])
+#
+# class AnswerForm(FlaskForm):
+#     content=TextAreaField('내용',validators=[DataRequired('내용은 필수 입력 항목 입니다.')])
 
 #회원 가입 폼
 class UserCreateForm(FlaskForm):
