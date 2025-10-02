@@ -42,6 +42,15 @@ html, body {
 }
 
 /* offcanvas 슬라이드 패널*/
+.clicks a{
+    text-decoration: none;
+    color: black;
+}
+
+.clicks button:hover{
+    text-decoration: none;
+    color: white;
+}
 
 /* Offcanvas custom size* */
 .offcanvas {
@@ -179,8 +188,8 @@ body.offcanvas-open {
 
 /* footer */
 .footer {
-    width: 1520px;
-    height: 350px;
+    /*width: 1520px;*/
+    /*height: 350px;*/
     margin: 0 auto;
 }
 
@@ -222,7 +231,7 @@ body {
 .logo-text {
     font-size: 24px;
     font-weight: 600;
-    color: #333;
+    color: #eee;
 }
 
 .footer-links {
@@ -239,7 +248,7 @@ body {
 }
 
 .footer-links a:hover {
-    color: #333;
+    color: #eee;
 }
 
 .footer-columns {
@@ -256,7 +265,7 @@ body {
 .footer-column h3 {
     font-size: 16px;
     font-weight: 600;
-    color: #333;
+    color: #eee;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -277,7 +286,7 @@ body {
 }
 
 .footer-column ul li a:hover {
-    color: #333;
+    color: #eee;
 }
 
 .footer-bottom {
