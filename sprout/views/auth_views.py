@@ -45,8 +45,9 @@ def login():
                 return redirect(url_for('main.index'))
         else:
             flash(errormsg)
+    return render_template('auth/login.html',form=form)
     return render_template('auth/login.html', form=form)
-
+  
 #라우팅 함수보다 먼저 실행하는 함수(요청 처리 들어오기 전에 먼저 실행)
 @bp.before_app_request
 def load_logged_in_user():

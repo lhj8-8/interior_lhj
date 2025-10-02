@@ -1,5 +1,47 @@
 {% extends 'base.html' %}
 {% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+
+    <body>
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="login-container w-75">
+                    <h2 class="text-center mb-4">로그인</h2>
+                    <form method="post">
+                        {{ form.csrf_token }}
+                        {% include 'form_errors.html' %}
+                        <div class="form-group mb-3">
+                            <label for="username" class="form-label">사용자 이름</label>
+                            <input type="text" name="username" id="username" class="form-control"
+                                   placeholder="사용자 이름을 입력하세요" required
+                                   value="{{ form.username.data or '' }}">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password" class="form-label">비밀번호</label>
+                            <input type="password" name="password" id="password" class="form-control"
+                                   placeholder="비밀번호를 입력하세요" required
+                                   value="{{ form.password.data or '' }}">
+                        </div>
+                        <div class="options d-flex justify-content-between align-items-center mb-3">
+                            <label class="mb-0">
+                                <input type="checkbox"> 로그인 상태 유지
+                            </label>
+                            <a href="#">비밀번호 찾기</a>
+                        </div>
+                        <button type="submit" class="login-btn btn btn-primary w-100">로그인</button>
+                    </form>
+                    <div class="signup-link text-center mt-3">
+                        계정이 없으신가요? <a href="{{ url_for('auth.signup') }}">회원가입</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='image/login.png') }}" alt="login" class="login-image">
+            </div>
+        </div>
+    </div>
+    </body>
 
   <style>
     * {
@@ -108,8 +150,8 @@
     .signup-link a:hover {
       text-decoration: underline;
     }
+    
   </style>
-
     <body>
     <div class="login-container">
         <h2>로그인</h2>

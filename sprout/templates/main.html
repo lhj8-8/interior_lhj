@@ -57,6 +57,88 @@
             </p>
         </div>
     </div>
+      
+    <!-- section_2 -->
+    <div class="section_2">
+        <div class="image-slider-container">
+            <div class="slider-wrapper" style="background-color: #1a1a1a" id="sliderWrapper">
+                <!-- Before 이미지 (빈 방) -->
+                <img src="{{ url_for('static', filename='image/after.png') }}" alt="After" class="before-image">
+
+                <!-- After 이미지 (가구가 있는 방) -->
+                <img src="{{ url_for('static', filename='image/before.png') }}" alt="Before" class="after-image"
+                     id="afterImage">
+
+                <!-- 슬라이더 구분선 -->
+                <div class="slider-divider" id="sliderDivider"></div>
+
+                <!-- 슬라이더 핸들 -->
+                <div class="slider-handle" id="sliderHandle"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- suvslide -->
+    <div class="suvslide">
+        <!-- 첫 번째 행 (왼쪽으로 이동) -->
+        <div class="parallax-section">
+            <div class="image-row" id="row1">
+                <div class="image-card">
+                    <img src=""
+                         alt="Living Room 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Kitchen 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bedroom 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Dining 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Office 1">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bathroom 1">
+                </div>
+            </div>
+        </div>
+
+        <!-- 두 번째 행 (오른쪽으로 이동) -->
+        <div class="parallax-section">
+            <div class="image-row" id="row2">
+                <div class="image-card">
+                    <img src=""
+                         alt="Living Room 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Kitchen 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bedroom 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Dining 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Office 2">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bathroom 2">
+                </div>
+            </div>
+        </div>
 
     <!-- section_2 -->
     <div class="section_2">
@@ -75,9 +157,39 @@
                 <!-- 슬라이더 핸들 -->
                 <div class="slider-handle" id="sliderHandle"></div>
 
+        <!-- 세 번째 행 (왼쪽으로 이동) -->
+        <div class="parallax-section">
+            <div class="image-row" id="row3">
+                <div class="image-card">
+                    <img src=""
+                         alt="Living Room 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Kitchen 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bedroom 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Dining 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Office 3">
+                </div>
+                <div class="image-card">
+                    <img src=""
+                         alt="Bathroom 3">
+                </div>
             </div>
         </div>
     </div>
+
+    {#section_3#}
+    <div class="section_3"></div>
 
     <!-- suvslide -->
     <div class="suvslide">
@@ -207,8 +319,8 @@
 
     </body>
 {% endblock %}
-
 {% block scripts %}
+      
     <!--custom js-->
     <script src="{{ url_for('static', filename='js.js') }}"></script>
 {% endblock %}
