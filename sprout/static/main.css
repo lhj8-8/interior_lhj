@@ -1,0 +1,377 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+.header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    color: yellowgreen;
+    z-index: 1000;
+}
+
+.header:hover {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.8s ease;
+    background-color: azure;
+    color: deeppink;
+    z-index: 1000;
+}
+
+/* header 내부에 a 태그 색상 변경 */
+.header a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #000;
+    text-decoration: none;
+}
+
+/* header 내부에 아이콘 크기 및 정렬 */
+.header a i {
+    font-size: 22px;
+}
+
+/* offcanvas 슬라이드 패널*/
+.clicks a {
+    text-decoration: none;
+    color: black;
+}
+.clicks button:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Offcanvas custom size* */
+.offcanvas {
+    width: 500px;
+    z-index: 1050; /* 오버레이보다 레이어 위 */
+}
+
+
+/* 패널 열려도 스크롤 허용 */
+body.offcanvas-open {
+    overflow: auto;
+    padding-right: 0;
+}
+
+/* 흰색 배경 */
+.offcanvas-header,
+.offcanvas-body {
+    background-color: white;
+    color: black;
+}
+
+/* section_1 */
+#carouselExampleDark {
+    height: 565px;
+    margin: 0 auto;
+    background-color: gold;
+}
+
+
+/* section_2 */
+.section_2 {
+    position: relative;
+    width: 1250px;
+    height: 735px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+/* 전/후 슬라이드 컨테이너 */
+.image-slider-container {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* 내부 래퍼 */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+}
+
+.slider-wrapper:active {
+    cursor: grabbing;
+}
+
+/* 이미지 */
+.before-image,
+.after-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.after-image {
+    clip-path: inset(0 50% 0 0);
+}
+
+/* 구분선/핸들 */
+.slider-divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background: #fff;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    z-index: 10;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+
+    /* handle(<>) 삽입 */
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+<polyline points='10,6 5,12 10,18' stroke='%23555' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+<polyline points='14,6 19,12 14,18' stroke='%23555' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+</svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px 26px;
+}
+
+/*.slider-handle::before,
+.slider-handle::after {
+    content: none;
+    border: 0;
+    width: 0;
+    height: 0;
+}*/
+
+/* suvslide */
+.suvslide {
+    width: 1520px;
+    height: 780px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.parallax-section {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.image-row {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+    padding: 0 20px;
+}
+
+.image-card {
+    min-width: 350px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*suvslide 끝*/
+
+/*section_3*/
+.section_3 {
+    width: 1520px;
+    height: 890px;
+    margin: 0 auto;
+    background-color: #10B981;
+}
+
+/* footer */
+.footer {
+    /*width: 1520px;*/
+    /*height: 350px;*/
+    margin: 0 auto;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+    background-color: #f5f5f5;
+     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.footer-container {
+    width: 1500px;
+    margin: 0 auto;
+    padding: 5px 50px 15px 50px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.footer-brand {
+    flex: 0 0 200px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.footer-links {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.footer-links a{
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #333;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 100px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.footer-column {
+    min-width: 120px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #eee;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-info {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}
+
+
+
+
+
+
