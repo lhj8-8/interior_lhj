@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='detail.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <body>
+    <!-- 제품 리스트 (왼쪽) -->
+    <div class="product-list">
+        <img src="chair_black.png" alt="블랙 스트라이프 의자" onclick="showDetails('chair_black')">
+        <img src="chair_white.png" alt="화이트 스트라이프 의자" onclick="showDetails('chair_white')">
+    </div>
+
+    <!-- 제품 상세 정보 (오른쪽) -->
+    <div class="product-details" id="productDetails">
+        <!-- 기본 내용은 첫 제품으로 -->
+    </div>
+    </body>
+
+{% endblock %}

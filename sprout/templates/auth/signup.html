@@ -1,30 +1,52 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container" style="height: 900px; " bg-light>
-        <h5 class="mb-30 mx-auto p-2">회원 가입</h5>
-        <form method="post">
-            {% include 'form_errors.html' %}
-            <div class="mb-20 mx-auto p-2" style="width: 330px;">
-                <label for="username">*사용자 이름</label>
-                <input type="text" name="username" id="username" class="form-control"
-                       value="{{ form.username.data or '' }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+
+    <div class="container" bg-light>
+        <div class="row min-vh-100">
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="login-container w-75">
+                    <h2 class="text-center mb-4">회원가입</h2>
+                    <form method="post">
+                        {% include 'form_errors.html' %}
+                        <div class="form-group mb-3">
+                            <label for="username">*사용자 이름</label>
+                            <input type="text" name="username" id="username" class="form-control"
+                                   placeholder="사용자 이름(id)을 입력하세요" required
+                                   value="{{ form.username.data or '' }}">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password1">*비밀번호</label>
+                            <input type="password" name="password1" id="password1" class="form-control"
+                                   placeholder="비밀번호를 입력하세요" required
+                                   value="{{ form.password1.data or '' }}">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password2">*비밀번호 확인</label>
+                            <input type="password" name="password2" id="password2" class="form-control"
+                                   value="{{ form.password2.data or '' }}">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email">이메일</label>
+                            <input type="email" name="email" id="email" class="form-control"
+                                   placeholder="이메일 주소를 입력하세요" required
+                                   value="{{ form.email.data or '' }}">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="phone">전화번호</label>
+                            <input type="tel" name="phone" id="phone" class="form-control"
+                                   placeholder="전화번호(010-XXXX-XXXX)를 입력하세요" required
+                                   value="{{ form.phone.data or '' }}">
+                        </div>
+                        <button type="submit" class="login-btn btn btn-primary w-100 d-flex justify-content-center">
+                            가입하기
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="mb-20 mx-auto p-2" style="width: 330px;">
-                <label for="password1">*비밀번호</label>
-                <input type="password" name="password1" id="password1" class="form-control"
-                       value="{{ form.password1.data or '' }}">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='image/detail.jpg') }}" alt="login" class="login-image">
             </div>
-            <div class="mb-20 mx-auto p-2" style="width: 330px;">
-                <label for="password2">*비밀번호 확인</label>
-                <input type="password" name="password2" id="password2" class="form-control"
-                       value="{{ form.password2.data or '' }}">
-            </div>
-            <div class="mb-20 mx-auto p-2" style="width: 330px;">
-                <label for="email">이메일</label>
-                <input type="email" name="email" id="email" class="form-control"
-                       value="{{ form.email.data or '' }}">
-            </div>
-            <button type="submit" class="btn btn-primary">가입하기</button>
-        </form>
+        </div>
     </div>
 {% endblock %}
