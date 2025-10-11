@@ -7,6 +7,7 @@ import math
 bp = Blueprint('product', __name__, url_prefix='/')
 
 
+# ㅡㅡㅡㅡㅡㅡㅡㅡ 페이지네이션 클래스 ㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 class ProductPagination:
     def __init__(self, items, page, per_page, total):
         self.items = items
@@ -42,54 +43,62 @@ class ProductPagination:
                 yield num
                 last = num
 
-# -------------------- JSON 파일로 호출한 페이지네이션 구성 -------------------
-def get_products_with_pagination(page):
-    per_page = 25 #페이지당 25개의 이미지 노출
 
+# ㅡㅡㅡㅡㅡㅡㅡㅡ JSON 데이터 로드 ㅡㅡㅡㅡㅡㅡㅡㅡ
+def load_products():
     try:
         with open('data/products.json', 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            all_products = data.get('products', [])
+            return json.load(f).get('products', [])
     except FileNotFoundError:
-        print("ERROR: data/products.json 파일을 찾을 수 없습니다!")
-        all_products = []
+        print("❌ ERROR: data/products.json 파일을 찾을 수 없습니다!")
+        return []
     except json.JSONDecodeError as e:
-        print(f"JSON 파싱 오류: {e}")
-        all_products = []
-
-    total = len(all_products)
-    start = (page - 1) * per_page
-    end = start + per_page
-    current_products = all_products[start:end]
-
-    return ProductPagination(current_products, page, per_page, total)
+        print(f"❌ JSON 파싱 오류: {e}")
+        return []
 
 
+# ㅡㅡㅡㅡㅡㅡㅡㅡ sub 페이지 (검색 + 필터 + 페이지네이션) ㅡㅡㅡㅡㅡㅡㅡㅡ
 @bp.route('/sub')
 def sub():
+    products = load_products()
+
+    # 검색어 & 스타일 파라미터 가져오기
+    search_query = request.args.get('search', '').strip().lower()
+    selected_style = request.args.get('style', '').strip()
+
+    # 검색 필터링
+    if search_query:
+        products = [p for p in products if search_query in p.get('name', '').lower()]
+
+    # 스타일 필터링
+    if selected_style:
+        products = [p for p in products if p.get('style', '').strip() == selected_style]
+
+    # 페이지네이션 처리
     page = request.args.get('page', 1, type=int)
-    product_list = get_products_with_pagination(page)
-    return render_template('sub.html', product_list=product_list)
+    per_page = 25
+    total = len(products)
+    start = (page - 1) * per_page
+    end = start + per_page
+    current_products = products[start:end]
+
+    product_list = ProductPagination(current_products, page, per_page, total)
+
+    # sub.html로 전달
+    return render_template(
+        'sub.html',
+        product_list=product_list,
+        selected_style=selected_style,
+        search_query=search_query
+    )
 
 
-@bp.route('/products')
-def products():
-    page = request.args.get('page', 1, type=int)
-    product_list = get_products_with_pagination(page)
-    return render_template('sub.html', product_list=product_list)
-
-
-# ==================== 장바구니 기능(AJAX 기반) ====================
-
-    # 로그인/회원 체크 여부
+# ㅡㅡㅡㅡㅡㅡㅡㅡ 장바구니 기능 ㅡㅡㅡㅡㅡㅡㅡㅡ
 @bp.route('/cart/add', methods=['POST'])
 def cart_add():
-    # 로그인 체크
     if not session.get('user_id'):
-    # 로그인 안내 팝업
         return jsonify({'success': False, 'message': 'Login required', 'redirect': True}), 401
 
-    # 요청한 json 파싱
     data = request.get_json()
     product_id = data.get('product_id')
 
@@ -100,17 +109,12 @@ def cart_add():
     if not product_id:
         return jsonify({'success': False, 'message': 'Product ID is required'}), 400
 
-    # 장바구니 중복 여부 확인 (사용자 기반)
-    existing = CartItem.query.filter_by(
-        user_id=g.user.id,
-        product_id=product_id
-    ).first()
+    existing = CartItem.query.filter_by(user_id=g.user.id, product_id=product_id).first()
 
     if existing:
         print(f"  이미 장바구니에 존재함")
         return jsonify({'success': True, 'message': 'Already in cart'})
 
-    # 새 아이템 추가
     new_item = CartItem(user_id=g.user.id, product_id=product_id)
     db.session.add(new_item)
     db.session.commit()
@@ -119,10 +123,9 @@ def cart_add():
 
     return jsonify({'success': True, 'message': 'Added to cart'})
 
-    # 장바구니 상품 삭제 (사용자 기반)
+
 @bp.route('/cart/remove', methods=['POST'])
 def cart_remove():
-    # 로그인 체크
     if not session.get('user_id'):
         return jsonify({'success': False, 'message': 'Login required', 'redirect': True}), 401
 
@@ -136,10 +139,7 @@ def cart_remove():
     if not product_id:
         return jsonify({'success': False, 'message': 'Product ID is required'}), 400
 
-    item = CartItem.query.filter_by(
-        user_id=g.user.id,
-        product_id=product_id
-    ).first()
+    item = CartItem.query.filter_by(user_id=g.user.id, product_id=product_id).first()
 
     if item:
         db.session.delete(item)
@@ -150,10 +150,9 @@ def cart_remove():
     print(f"  삭제할 아이템을 찾을 수 없음")
     return jsonify({'success': False, 'message': 'Item not found'}), 404
 
-    # 장바구니 상태 확인 (사용자 기반)
+
 @bp.route('/cart/check')
 def cart_check():
-    # 로그인하지 않은 경우 빈 배열 반환
     if not session.get('user_id'):
         return jsonify({'cart_items': [], 'logged_in': False})
 
