@@ -131,3 +131,79 @@ function toggleWishlist(event, productId) {
         });
     }
 }
+
+// ================================
+// 초기 로딩 시 숨김 (URL 파라미터 존재 시)
+// ================================
+(function () {
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (
+      urlParams.has('page') ||
+      urlParams.has('style') ||
+      urlParams.has('brand') ||
+      urlParams.has('sort') ||
+      urlParams.has('search')
+    ) {
+      document.documentElement.classList.add('loading-scroll');
+      document.body.classList.add('loading-scroll');
+    }
+  } catch (e) {
+    console.warn('loading-scroll init error:', e);
+  }
+})();
+
+// ================================
+// DOM 로드 후 섹션으로 즉시 스크롤
+// ================================
+(function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (
+    urlParams.has('page') ||
+    urlParams.has('style') ||
+    urlParams.has('brand') ||
+    urlParams.has('sort') ||
+    urlParams.has('search')
+  ) {
+    window.addEventListener('DOMContentLoaded', function () {
+      const section_cb = document.querySelector('.section_cb');
+      const header = document.querySelector('header') || document.querySelector('nav');
+
+      if (section_cb) {
+        const headerHeight = header ? header.offsetHeight : 80; // 기본 80px
+        const sectionPosition = section_cb.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = sectionPosition - headerHeight - 20;
+
+        window.scrollTo({
+          top: offsetPosition,
+          // instant: 일부 브라우저 미지원 → 기본 동작으로 즉시 이동
+          behavior: 'auto'
+        });
+
+        setTimeout(function () {
+          document.documentElement.classList.remove('loading-scroll');
+          document.body.classList.remove('loading-scroll');
+        }, 10);
+      } else {
+        // 섹션을 못 찾은 경우에도 숨김 해제
+        document.documentElement.classList.remove('loading-scroll');
+        document.body.classList.remove('loading-scroll');
+      }
+    });
+  }
+})();
+
+// ================================
+// 필터 리셋 버튼
+// ================================
+window.resetStyleFilter = function () {
+  document.querySelectorAll('#styleFilterForm input[type="checkbox"]').forEach(cb => (cb.checked = false));
+  const dropdown = bootstrap.Dropdown.getInstance(document.getElementById('styleDropdown'));
+  if (dropdown) dropdown.hide();
+};
+
+window.resetBrandFilter = function () {
+  document.querySelectorAll('#brandFilterForm input[type="checkbox"]').forEach(cb => (cb.checked = false));
+  const dropdown = bootstrap.Dropdown.getInstance(document.getElementById('brandDropdown'));
+  if (dropdown) dropdown.hide();
+};

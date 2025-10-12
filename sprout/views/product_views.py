@@ -44,7 +44,7 @@ class ProductPagination:
                 last = num
 
 
-# ㅡㅡㅡㅡㅡㅡㅡㅡ JSON 데이터 로드 ㅡㅡㅡㅡㅡㅡㅡㅡ
+# ㅡㅡㅡㅡㅡㅡㅡㅡ JSON 데이터 로드 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 def load_products():
     try:
         with open('data/products.json', 'r', encoding='utf-8') as f:
@@ -64,15 +64,37 @@ def sub():
 
     # 검색어 & 스타일 파라미터 가져오기
     search_query = request.args.get('search', '').strip().lower()
-    selected_style = request.args.get('style', '').strip()
+    selected_styles = request.args.getlist('style')
+    selected_brands = request.args.getlist('brand')
+    sort_by = request.args.get('sort', 'default')
+
+    print(f"\n=== 필터링 정보 ===")
+    print(f"검색어: {search_query}")
+    print(f"선택된 스타일: {selected_styles}")
+    print(f"선택된 브랜드: {selected_brands}")
+    print(f"정렬 기준: {sort_by}")
 
     # 검색 필터링
     if search_query:
         products = [p for p in products if search_query in p.get('name', '').lower()]
 
     # 스타일 필터링
-    if selected_style:
-        products = [p for p in products if p.get('style', '').strip() == selected_style]
+    if selected_styles:
+        products = [p for p in products if p.get('style', '').strip() in selected_styles]
+        print(f"스타일 필터링 후 상품 수: {len(products)}")
+
+        # 브랜드 필터링 (여러 개 선택 가능)
+    if selected_brands:
+        products = [p for p in products if p.get('brand', '').strip() in selected_brands]
+        print(f"브랜드 필터링 후 상품 수: {len(products)}")
+
+        # 정렬 처리
+    if sort_by == 'price_low':
+        products.sort(key=lambda x: x.get('price', 0))
+        print("낮은 가격순으로 정렬")
+    elif sort_by == 'price_high':
+        products.sort(key=lambda x: x.get('price', 0), reverse=True)
+        print("높은 가격순으로 정렬")
 
     # 페이지네이션 처리
     page = request.args.get('page', 1, type=int)
@@ -88,12 +110,14 @@ def sub():
     return render_template(
         'sub.html',
         product_list=product_list,
-        selected_style=selected_style,
-        search_query=search_query
+        selected_styles=selected_styles,
+        selected_brands=selected_brands,
+        search_query=search_query,
+        current_sort=sort_by
     )
 
 
-# ㅡㅡㅡㅡㅡㅡㅡㅡ 장바구니 기능 ㅡㅡㅡㅡㅡㅡㅡㅡ
+# ㅡㅡㅡㅡㅡㅡㅡㅡ 장바구니 기능 ㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 @bp.route('/cart/add', methods=['POST'])
 def cart_add():
     if not session.get('user_id'):
