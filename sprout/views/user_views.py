@@ -1,6 +1,12 @@
 from flask import Blueprint, render_template, request, g, session, redirect, url_for
 from sprout.models import CartItem
+<<<<<<< HEAD
 import json, math, os
+=======
+import json
+import math
+import os
+>>>>>>> upstream/develop
 
 bp = Blueprint('user', __name__, url_prefix='/')
 
@@ -94,12 +100,24 @@ def mypage():
 
     # 장바구니 아이템과 제품 정보 매칭 (사용자 기반)
     items_with_info = []
+<<<<<<< HEAD
     for cart_item in cart_items_db:
         product_id = cart_item.product_id
         product_info = products_dict.get(product_id)
         if product_info:
             items_with_info.append(product_info)
             print(f"  매칭: {product_info['name']}")
+=======
+
+    for cart_item in cart_items_db:
+        product_id = cart_item.product_id
+
+        if product_id in products_dict:
+            product = products_dict[product_id].copy()
+            product['id'] = product_id
+            items_with_info.append(product)
+            print(f"  매칭: {product['name']}")
+>>>>>>> upstream/develop
         else:
             print(f"  매칭 실패: Product ID {product_id}")
 

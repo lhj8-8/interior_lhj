@@ -4,6 +4,9 @@ html, body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
     background-color: #f5f5f5;
@@ -15,9 +18,12 @@ body {
 /* =========================================
    HEADER
 ========================================= */
+<<<<<<< HEAD
 =======
 /* header */
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 .header {
     height: 70px;
     position: fixed;
@@ -25,6 +31,9 @@ body {
     left: 0;
     right: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
     backdrop-filter: blur(5px);
     background-color: transparent;
     z-index: 1000;
@@ -112,6 +121,7 @@ body {
 /* =========================================
    OFFCANVAS (슬라이드 패널)
 ========================================= */
+<<<<<<< HEAD
 =======
     backdrop-filter: blur(10px);
     color: yellowgreen;
@@ -146,6 +156,8 @@ body {
 
 /* offcanvas 슬라이드 패널*/
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 .clicks a {
     text-decoration: none;
     color: black;
@@ -157,12 +169,16 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
 /* 슬라이드 패널 크기 및 스타일 */
 .offcanvas {
     width: 500px;
     z-index: 1050;
 }
 
+<<<<<<< HEAD
 =======
 /* Offcanvas custom size* */
 .offcanvas {
@@ -173,15 +189,20 @@ body {
 
 /* 패널 열려도 스크롤 허용 */
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 body.offcanvas-open {
     overflow: auto;
     padding-right: 0;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /* 흰색 배경 */
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 .offcanvas-header,
 .offcanvas-body {
     background-color: white;
@@ -189,6 +210,9 @@ body.offcanvas-open {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
 /* =========================================
    SECTION 1 (메인 캐러셀)
 ========================================= */
@@ -213,6 +237,7 @@ body.offcanvas-open {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 =======
 /* section_1 */
 #carouselExampleDark {
@@ -239,14 +264,19 @@ body.offcanvas-open {
 
 /* 전/후 슬라이드 컨테이너 */
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 .image-slider-container {
     position: absolute;
     inset: 0;
     margin: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     background: #fff;
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
     overflow: hidden;
 }
 
@@ -305,10 +335,13 @@ body.offcanvas-open {
     justify-content: center;
     z-index: 20;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     /* handle(<>) 삽입 */
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
 <polyline points='10,6 5,12 10,18' stroke='%23555' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
@@ -319,6 +352,7 @@ body.offcanvas-open {
     background-size: 26px 26px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* =========================================
    SECTION 2-2 (SUV 슬라이드)
@@ -334,6 +368,11 @@ body.offcanvas-open {
 
 /* suvslide */
 >>>>>>> upstream/main
+=======
+/* =========================================
+   SECTION 2-2 (SUV 슬라이드)
+========================================= */
+>>>>>>> upstream/develop
 .suvslide {
     width: 1520px;
     height: 780px;
@@ -376,6 +415,9 @@ body.offcanvas-open {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
 /* =========================================
    SECTION 3
 ========================================= */
@@ -400,6 +442,7 @@ body.offcanvas-open {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 =======
 /*suvslide 끝*/
 
@@ -479,6 +522,8 @@ body {
 }
 
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 .main-content {
     flex: 1;
     display: flex;
@@ -494,9 +539,13 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 상단 섹션 */
 =======
 >>>>>>> upstream/main
+=======
+/* 상단 섹션 */
+>>>>>>> upstream/develop
 .footer-top {
     display: flex;
     justify-content: space-between;
@@ -522,6 +571,7 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 링크 영역 */
 =======
 .logo-text {
@@ -532,6 +582,9 @@ body {
 }
 
 >>>>>>> upstream/main
+=======
+/* 링크 영역 */
+>>>>>>> upstream/develop
 .footer-links {
     font-size: 14px;
     color: #666;
@@ -539,10 +592,14 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .footer-links a {
 =======
 .footer-links a{
 >>>>>>> upstream/main
+=======
+.footer-links a {
+>>>>>>> upstream/develop
     color: #666;
     text-decoration: none;
     font-size: 14px;
@@ -552,6 +609,7 @@ body {
 .footer-links a:hover {
     color: #333;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 /* 컬럼 레이아웃 */
@@ -560,6 +618,11 @@ body {
 }
 
 >>>>>>> upstream/main
+=======
+}
+
+/* 컬럼 레이아웃 */
+>>>>>>> upstream/develop
 .footer-columns {
     display: flex;
     gap: 100px;
@@ -576,6 +639,7 @@ body {
     font-weight: 600;
     color: #333;
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-bottom: 20px;
     text-align: left;
 =======
@@ -583,23 +647,33 @@ body {
     margin-bottom: 20px;
     text-align: center;
 >>>>>>> upstream/main
+=======
+    margin-bottom: 20px;
+    text-align: center;
+>>>>>>> upstream/develop
 }
 
 .footer-column ul {
     list-style: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding: 0;
     margin: 0;
 =======
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 }
 
 .footer-column ul li {
     margin-bottom: 12px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     text-align: left;
 =======
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 }
 
 .footer-column ul li a {
@@ -614,9 +688,13 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 하단 영역 */
 =======
 >>>>>>> upstream/main
+=======
+/* 하단 영역 */
+>>>>>>> upstream/develop
 .footer-bottom {
     border-top: 1px solid #e0e0e0;
     padding-top: 30px;
@@ -637,6 +715,9 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
 /* 반응형 */
 @media (max-width: 768px) {
     .header {
@@ -658,9 +739,12 @@ body {
         margin-bottom: 10px;
     }
 
+<<<<<<< HEAD
 =======
 @media (max-width: 768px) {
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
     .footer-top {
         flex-direction: column;
         gap: 40px;
@@ -670,6 +754,7 @@ body {
         flex-direction: column;
         gap: 30px;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -682,3 +767,6 @@ body {
 
 
 >>>>>>> upstream/main
+=======
+}
+>>>>>>> upstream/develop

@@ -2,6 +2,9 @@ from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from wtforms.fields.simple import StringField, TextAreaField, PasswordField, EmailField
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
 from wtforms.validators import DataRequired, Length, EqualTo, Email, Regexp
 
 
@@ -12,6 +15,7 @@ class QuestionForm(FlaskForm):
 
 class AnswerForm(FlaskForm):
     content=TextAreaField('내용',validators=[DataRequired('내용은 필수 입력 항목 입니다.')])
+<<<<<<< HEAD
 =======
 from wtforms.validators import DataRequired, Length, EqualTo, Email
 
@@ -24,6 +28,8 @@ from wtforms.validators import DataRequired, Length, EqualTo, Email
 # class AnswerForm(FlaskForm):
 #     content=TextAreaField('내용',validators=[DataRequired('내용은 필수 입력 항목 입니다.')])
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 
 #회원 가입 폼
 class UserCreateForm(FlaskForm):
@@ -32,10 +38,15 @@ class UserCreateForm(FlaskForm):
     password2 = PasswordField('비밀번호 확인',validators=[DataRequired()])
     email=EmailField('이메일', validators=[DataRequired(), Email()])
 <<<<<<< HEAD
+<<<<<<< HEAD
     phone = StringField('Phone Number', validators=[DataRequired(),
             Regexp(r'^\d{3}-\d{3,4}-\d{4}$', message="전화번호 형식은 010-0000-0000 입니다.")])
 =======
 >>>>>>> upstream/main
+=======
+    phone = StringField('Phone Number', validators=[DataRequired(),
+            Regexp(r'^\d{3}-\d{3,4}-\d{4}$', message="전화번호 형식은 010-0000-0000 입니다.")])
+>>>>>>> upstream/develop
 
 #로그인 폼
 class UserLoginForm(FlaskForm):

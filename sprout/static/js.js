@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
 // 메인 페이지 로드 시 초기화
 document.addEventListener('DOMContentLoaded', () => {
   // 비교 슬라이더 초기화
@@ -91,6 +94,7 @@ window.addEventListener('scroll', function() {
       header.classList.remove('scrolled');
     }
   }
+<<<<<<< HEAD
 });
 =======
 /* 비교 슬라이더 초기 설정 */
@@ -159,3 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('row3').style.transform = 'translateX(0px)';
         });
 >>>>>>> upstream/main
+=======
+});
+>>>>>>> upstream/develop

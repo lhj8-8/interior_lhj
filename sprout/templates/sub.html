@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
 
 {% block style %}
   <link rel="stylesheet" href="{{ url_for('static', filename='sub.css') }}">
@@ -317,6 +320,7 @@
         <!-- 제품 그리드 (5x5) -->
         <div class="product-grid">
           {% for product in product_list.items %}
+<<<<<<< HEAD
               <a href="{{ url_for('product_detail', product_id=product.id) }}">
                   <article class="product-card" data-id="{{ product.id }}">
                       <div class="product-image position-relative">
@@ -343,6 +347,31 @@
                       </div>
                   </article>
               </a>
+=======
+            <article class="product-card" data-id="{{ product.id }}">
+              <div class="product-image position-relative">
+                <img
+                  src="{{ product.image_url }}"
+                  alt="{{ product.name }}"
+                  loading="lazy"
+                  onerror="this.src='/static/img/placeholder.png'"
+                >
+                <button
+                  class="btn btn-link position-absolute p-0 border-0 wishlist-btn"
+                  style="bottom: 10px; right: 10px; background-color: rgba(255, 255, 255, 0.9); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"
+                  data-product-id="{{ product.id }}"
+                  onclick="toggleWishlist(event, {{ product.id }})"
+                >
+                  <i class="bi bi-heart" style="font-size: 18px; color: #333;"></i>
+                </button>
+              </div>
+              <div class="product-info">
+                <p class="product-brand mb-1">{{ product.brand }}</p>
+                <h3 class="product-name">{{ product.name }}</h3>
+                <p class="product-price mb-0">{{ "{:,}".format(product.price) }}원</p>
+              </div>
+            </article>
+>>>>>>> upstream/develop
           {% endfor %}
         </div>
 
@@ -415,6 +444,7 @@
 {% block extra_js %}
   <script src="{{ url_for('static', filename='sub.js') }}"></script>
 {% endblock %}
+<<<<<<< HEAD
 =======
 {% block style %}
 
@@ -708,3 +738,5 @@
 {% block script %}
 {% endblock %}
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop

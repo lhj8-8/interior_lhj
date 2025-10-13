@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from flask import Blueprint, render_template
 =======
 from flask import Blueprint, render_template, request
@@ -83,6 +84,9 @@ def products():
     product_list = get_products_with_pagination(page)
     return render_template('sub.html', product_list=product_list)
 >>>>>>> upstream/main
+=======
+from flask import Blueprint, render_template
+>>>>>>> upstream/develop
 
 bp = Blueprint ('main',__name__, url_prefix='/')
 @bp.route('/')

@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from sprout import create_app, db
 from sprout.models import User, CartItem
 from flask import render_template, request
 import os, json
+=======
+from sprout import create_app, db
+from sprout.models import User, CartItem
+>>>>>>> upstream/develop
 
 # sprout 패키지의 create_app() 사용
 app = create_app()
@@ -12,6 +17,7 @@ app = create_app()
 def create_dummy_data():
     with app.app_context():
         db.create_all()
+<<<<<<< HEAD
         print('데이터베이스 테이블 생성 완료!')
 
 
@@ -47,6 +53,13 @@ def product_detail():
     return render_template("product_detail.html", product=product)
 
 
+=======
+        # User 테이블과 CartItem 테이블만 생성
+        # 제품 데이터는 data/products.json에서
+        print('데이터베이스 테이블 생성 완료!')
+
+
+>>>>>>> upstream/develop
 # 등록된 라우트 확인
 with app.app_context():
     print("\n" + "=" * 70)
@@ -57,12 +70,16 @@ with app.app_context():
         print(f"{rule.endpoint:35s} {methods:15s} {rule.rule}")
     print("=" * 70 + "\n")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/develop
 if __name__ == '__main__':
     # 데이터베이스 테이블 생성
     create_dummy_data()
 
     # Flask 서버 실행
+<<<<<<< HEAD
     app.run(debug=True)
 =======
 from flask import Flask, render_template, request
@@ -132,3 +149,6 @@ if __name__ == '__main__':
     create_dummy_data()
     app.run(debug=True)
 >>>>>>> upstream/main
+=======
+    app.run(debug=True)
+>>>>>>> upstream/develop

@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // sub 제품 찜 로직 (서버 API 연동)
 
 =======
 >>>>>>> upstream/main
+=======
+// sub 제품 찜 로직 (서버 API 연동)
+
+>>>>>>> upstream/develop
 // 카테고리 토글 버튼
 document.addEventListener('DOMContentLoaded', function () {
   const categoryToggles = document.querySelectorAll('.category-toggle');
@@ -22,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
 
   // 페이지 로드 시 장바구니 상태 동기화
   fetch('/cart/check')
@@ -45,16 +53,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // 장바구니 토글 함수
+<<<<<<< HEAD
 =======
 });
 
 // 찜 목록 토글 함수
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
 function toggleWishlist(event, productId) {
     event.preventDefault();
     event.stopPropagation();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/develop
     const button = event.currentTarget;
     const heartIcon = button.querySelector('i');
     const isFilled = heartIcon.classList.contains('bi-heart-fill');
@@ -217,6 +231,7 @@ window.resetBrandFilter = function () {
   const dropdown = bootstrap.Dropdown.getInstance(document.getElementById('brandDropdown'));
   if (dropdown) dropdown.hide();
 };
+<<<<<<< HEAD
 =======
     const btn = event.currentTarget;
     const icon = btn.querySelector('i');
@@ -277,3 +292,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 >>>>>>> upstream/main
+=======
+>>>>>>> upstream/develop
