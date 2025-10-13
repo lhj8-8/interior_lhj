@@ -3,13 +3,116 @@ html, body {
     padding: 0;
 }
 
+<<<<<<< HEAD
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+=======
 /* header */
+>>>>>>> upstream/main
 .header {
     height: 70px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+<<<<<<< HEAD
+    backdrop-filter: blur(5px);
+    background-color: transparent;
+    z-index: 1000;
+    padding: 0 80px;
+    transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: rgba(245, 235, 220, 0.9);
+}
+
+.header:hover {
+    background-color: rgba(245, 235, 220, 0.9);
+}
+
+/* 헤더 내부 레이아웃 */
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* 좌측: 네비게이션 */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex: 1;
+}
+
+.header-left .nav-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+/* 중앙: 로고 */
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 20px;
+    width: auto;
+    display: block;
+}
+
+/* 우측: 아이콘 메뉴 */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.header-icon i {
+    font-size: 22px;
+}
+
+/* =========================================
+   OFFCANVAS (슬라이드 패널)
+========================================= */
+=======
     backdrop-filter: blur(10px);
     color: yellowgreen;
     z-index: 1000;
@@ -42,6 +145,7 @@ html, body {
 }
 
 /* offcanvas 슬라이드 패널*/
+>>>>>>> upstream/main
 .clicks a {
     text-decoration: none;
     color: black;
@@ -52,6 +156,14 @@ html, body {
     color: white;
 }
 
+<<<<<<< HEAD
+/* 슬라이드 패널 크기 및 스타일 */
+.offcanvas {
+    width: 500px;
+    z-index: 1050;
+}
+
+=======
 /* Offcanvas custom size* */
 .offcanvas {
     width: 500px;
@@ -60,18 +172,48 @@ html, body {
 
 
 /* 패널 열려도 스크롤 허용 */
+>>>>>>> upstream/main
 body.offcanvas-open {
     overflow: auto;
     padding-right: 0;
 }
 
+<<<<<<< HEAD
+=======
 /* 흰색 배경 */
+>>>>>>> upstream/main
 .offcanvas-header,
 .offcanvas-body {
     background-color: white;
     color: black;
 }
 
+<<<<<<< HEAD
+/* =========================================
+   SECTION 1 (메인 캐러셀)
+========================================= */
+#carouselExampleDark {
+    height: 565px;
+    margin: 0 auto;
+}
+
+#carouselExampleDark img {
+    width: 100%;
+    height: 565px;
+    object-fit: cover;
+}
+
+/* =========================================
+   SECTION 2 (전/후 슬라이드)
+========================================= */
+.section_2 {
+    position: relative;
+    width: 1366px;
+    height: 768px;
+    margin: 0 auto;
+}
+
+=======
 /* section_1 */
 #carouselExampleDark {
     height: 565px;
@@ -96,11 +238,15 @@ body.offcanvas-open {
 }
 
 /* 전/후 슬라이드 컨테이너 */
+>>>>>>> upstream/main
 .image-slider-container {
     position: absolute;
     inset: 0;
     margin: 0;
+<<<<<<< HEAD
+=======
     background: #fff;
+>>>>>>> upstream/main
     overflow: hidden;
 }
 
@@ -158,8 +304,11 @@ body.offcanvas-open {
     align-items: center;
     justify-content: center;
     z-index: 20;
+<<<<<<< HEAD
+=======
 
     /* handle(<>) 삽입 */
+>>>>>>> upstream/main
     background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
 <polyline points='10,6 5,12 10,18' stroke='%23555' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
@@ -170,6 +319,11 @@ body.offcanvas-open {
     background-size: 26px 26px;
 }
 
+<<<<<<< HEAD
+/* =========================================
+   SECTION 2-2 (SUV 슬라이드)
+========================================= */
+=======
 .slider-handle::before,
 .slider-handle::after {
     content: none;
@@ -179,6 +333,7 @@ body.offcanvas-open {
 }
 
 /* suvslide */
+>>>>>>> upstream/main
 .suvslide {
     width: 1520px;
     height: 780px;
@@ -220,6 +375,32 @@ body.offcanvas-open {
     object-fit: cover;
 }
 
+<<<<<<< HEAD
+/* =========================================
+   SECTION 3
+========================================= */
+.section_3 {
+    display: flex;
+    width: 1366px;
+    height: 768px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.section_3 video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+.footer {
+    margin: 0 auto;
+}
+
+=======
 /*suvslide 끝*/
 
 /*section_3*/
@@ -297,6 +478,7 @@ body {
     min-height: 100vh;
 }
 
+>>>>>>> upstream/main
 .main-content {
     flex: 1;
     display: flex;
@@ -311,6 +493,10 @@ body {
     padding: 5px 50px 15px 50px;
 }
 
+<<<<<<< HEAD
+/* 상단 섹션 */
+=======
+>>>>>>> upstream/main
 .footer-top {
     display: flex;
     justify-content: space-between;
@@ -335,6 +521,9 @@ body {
     border-radius: 4px;
 }
 
+<<<<<<< HEAD
+/* 링크 영역 */
+=======
 .logo-text {
     font-size: 24px;
     font-weight: 600;
@@ -342,13 +531,18 @@ body {
     color: #eee;
 }
 
+>>>>>>> upstream/main
 .footer-links {
     font-size: 14px;
     color: #666;
     line-height: 1.8;
 }
 
+<<<<<<< HEAD
+.footer-links a {
+=======
 .footer-links a{
+>>>>>>> upstream/main
     color: #666;
     text-decoration: none;
     font-size: 14px;
@@ -357,9 +551,15 @@ body {
 
 .footer-links a:hover {
     color: #333;
+<<<<<<< HEAD
+}
+
+/* 컬럼 레이아웃 */
+=======
     color: #eee;
 }
 
+>>>>>>> upstream/main
 .footer-columns {
     display: flex;
     gap: 100px;
@@ -375,17 +575,31 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: #333;
+<<<<<<< HEAD
+    margin-bottom: 20px;
+    text-align: left;
+=======
     color: #eee;
     margin-bottom: 20px;
     text-align: center;
+>>>>>>> upstream/main
 }
 
 .footer-column ul {
     list-style: none;
+<<<<<<< HEAD
+    padding: 0;
+    margin: 0;
+=======
+>>>>>>> upstream/main
 }
 
 .footer-column ul li {
     margin-bottom: 12px;
+<<<<<<< HEAD
+    text-align: left;
+=======
+>>>>>>> upstream/main
 }
 
 .footer-column ul li a {
@@ -399,6 +613,10 @@ body {
     color: #eee;
 }
 
+<<<<<<< HEAD
+/* 하단 영역 */
+=======
+>>>>>>> upstream/main
 .footer-bottom {
     border-top: 1px solid #e0e0e0;
     padding-top: 30px;
@@ -418,7 +636,31 @@ body {
     margin-top: 20px;
 }
 
+<<<<<<< HEAD
+/* 반응형 */
 @media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .header-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .header-left,
+    .header-right {
+        flex: auto;
+    }
+
+    .header-center {
+        order: -1;
+        flex: 100%;
+        margin-bottom: 10px;
+    }
+
+=======
+@media (max-width: 768px) {
+>>>>>>> upstream/main
     .footer-top {
         flex-direction: column;
         gap: 40px;
@@ -428,6 +670,9 @@ body {
         flex-direction: column;
         gap: 30px;
     }
+<<<<<<< HEAD
+}
+=======
 
 }
 
@@ -436,3 +681,4 @@ body {
 
 
 
+>>>>>>> upstream/main

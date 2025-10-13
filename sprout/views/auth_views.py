@@ -7,7 +7,12 @@ from sprout import db
 from sprout.forms import UserCreateForm, UserLoginForm
 from sprout.models import User
 
+<<<<<<< HEAD
+bp = Blueprint('auth', __name__, url_prefix='/')
+
+=======
 bp=Blueprint('auth', __name__, url_prefix='/')
+>>>>>>> upstream/main
 
 @bp.route('/signup/', methods=['GET', 'POST'])
 def signup():
@@ -17,7 +22,12 @@ def signup():
         if not user:
             user = User(username=form.username.data,
                         password=generate_password_hash(form.password1.data),
+<<<<<<< HEAD
+                        email=form.username.data,
+                        phone=form.phone.data)
+=======
                         email=form.username.data)
+>>>>>>> upstream/main
             db.session.add(user)
             db.session.commit()
             return redirect(url_for('main.index'))
@@ -25,6 +35,10 @@ def signup():
             flash('이미 존재하는 사용자입니다.')
     return render_template('auth/signup.html', form=form)
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> upstream/main
 @bp.route('/login/', methods=['GET', 'POST'])
 def login():
     form = UserLoginForm()
@@ -45,25 +59,44 @@ def login():
                 return redirect(url_for('main.index'))
         else:
             flash(errormsg)
+<<<<<<< HEAD
+    return render_template('auth/login.html', form=form)
+
+
+# 라우팅 함수보다 먼저 실행하는 함수(요청 처리 들어오기 전에 먼저 실행)
+=======
     return render_template('auth/login.html',form=form)
     return render_template('auth/login.html', form=form)
   
 #라우팅 함수보다 먼저 실행하는 함수(요청 처리 들어오기 전에 먼저 실행)
+>>>>>>> upstream/main
 @bp.before_app_request
 def load_logged_in_user():
     user_id = session.get('user_id')
     if user_id is None:
         g.user = None
     else:
+<<<<<<< HEAD
+        g.user = User.query.get(user_id)  # g: 플라스크의 컨텍스트 변수. 요청->응답 과정에서 유효
+
+
+# 로그아웃
+=======
         g.user=User.query.get(user_id)  #g: 플라스크의 컨텍스트 변수. 요청->응답 과정에서 유효
 
 #로그아웃
+>>>>>>> upstream/main
 @bp.route('/logout/')
 def logout():
     session.clear()
     return redirect(url_for('main.index'))
 
+<<<<<<< HEAD
+
+# login_required 데코레이터 함수 (데코레이트: 반복될 때 활용)
+=======
 #login_required 데코레이터 함수 (데코레이트: 반복될 때 활용)
+>>>>>>> upstream/main
 def login_required(view):
     @functools.wraps(view)
     def wrapped_view(*args, **kwargs):
@@ -71,4 +104,9 @@ def login_required(view):
             _next = request.url if request.method == 'GET' else ''
             return redirect(url_for('auth.login', next=_next))
         return view(*args, **kwargs)
+<<<<<<< HEAD
+
     return wrapped_view
+=======
+    return wrapped_view
+>>>>>>> upstream/main

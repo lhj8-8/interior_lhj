@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+from flask import Blueprint, render_template
+=======
 from flask import Blueprint, render_template, request
 import json
 import math
@@ -79,6 +82,7 @@ def products():
     page = request.args.get('page', 1, type=int)
     product_list = get_products_with_pagination(page)
     return render_template('sub.html', product_list=product_list)
+>>>>>>> upstream/main
 
 bp = Blueprint ('main',__name__, url_prefix='/')
 @bp.route('/')

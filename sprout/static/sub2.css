@@ -1,0 +1,24 @@
+/* mypage 장바구니 */
+.cart-item {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+    .cart-item:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .cart-item-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .empty-cart {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: #6c757d;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+    }
+
+
