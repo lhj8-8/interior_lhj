@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+<<<<<<< HEAD
 
 {% block style %}
   <link rel="stylesheet" href="{{ url_for('static', filename='sub.css') }}">
@@ -414,3 +415,296 @@
 {% block extra_js %}
   <script src="{{ url_for('static', filename='sub.js') }}"></script>
 {% endblock %}
+=======
+{% block style %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='sub.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sub.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sub.js') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+
+{% endblock %}
+{% block content %}
+
+<body style="background-color: #1a1a1a">
+<!-- section_1 -->
+<div class="section_1 container-fluid"></div>
+
+<!-- 섹션_tb: 전체 타이틀과 검색창 -->
+<div class="section_tb">
+    <nav class="navbar navbar-light bg-white border-bottom py-2">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <!-- 왼쪽: 전체 타이틀 -->
+                <div class="d-flex align-items-center">
+                    <h5 class="mb-0 fw-bold">전체</h5>
+                </div>
+
+                <!-- 오른쪽: 검색창 -->
+                <div class="flex-grow-1 ms-4">
+                    <form class="d-flex" role="search" style="max-width: 400px; margin-left: auto;">
+                        <input class="form-control me-2" type="search" placeholder="검색어를 입력하세요" aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                  
+    <body style="background-color: #1a1a1a">
+    <!-- section_1 -->
+    <div class="section_1 container-fluid"></div>
+
+    <div class="section_tb">
+
+        <!-- 메인 메뉴 네비게이션 -->
+        <nav class="navbar navbar-light bg-white border-bottom py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <!-- 왼쪽: 전체 메뉴 -->
+                    <div class="d-flex align-items-center">
+                        <a class="nav-link active fw-bold" href="#" style="border-bottom: 2px solid #333;">전체</a>
+                    </div>
+
+                    <!-- 오른쪽: 메뉴 토글 버튼 -->
+                    <div>
+                        <button class="btn btn-outline-secondary menu-btn" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#menuContent"
+                                aria-expanded="false"
+                                aria-controls="menuContent">
+                            <i class="bi bi-list"></i> 메뉴
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 서브 네비게이션 (스타일, 색상, 브랜드, 정렬) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom py-2">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center w-100 flex-wrap gap-2">
+                <!-- 왼쪽 필터들 -->
+                <div class="d-flex align-items-center flex-grow-1 flex-wrap gap-2">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button"
+                                id="styleDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-palette"></i> 스타일
+                        </button>
+                        <div class="dropdown-menu p-3" style="min-width: 200px;">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="modern" name="style" value="modern">
+                                <label class="form-check-label" for="modern">모던</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="nordic" name="style" value="nordic">
+                                <label class="form-check-label" for="nordic">내츄럴/우드</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="vintage" name="style" value="vintage">
+                                <label class="form-check-label" for="vintage">미드센추리</label>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-secondary btn-sm flex-fill" data-bs-toggle="dropdown">취소</button>
+                                <button type="button" class="btn btn-dark btn-sm flex-fill" data-bs-toggle="dropdown">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button"
+                                id="colorDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-circle-fill"></i> 색상
+                        </button>
+                        <div class="dropdown-menu p-3" style="min-width: 200px;">
+                            <div class="form-check mb-2 d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="white" name="color" value="white">
+                                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: white; border: 1px solid #ddd;"></div>
+                                <label class="form-check-label" for="white">화이트</label>
+                            </div>
+                            <div class="form-check mb-2 d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="purple" name="color" value="purple">
+                                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #8B5CF6;"></div>
+                                <label class="form-check-label" for="purple">퍼플</label>
+                            </div>
+                            <div class="form-check mb-2 d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="orange" name="color" value="orange">
+                                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #F97316;"></div>
+                                <label class="form-check-label" for="orange">오렌지</label>
+                            </div>
+                            <div class="form-check mb-2 d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="red" name="color" value="red">
+                                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #EF4444;"></div>
+                                <label class="form-check-label" for="red">레드</label>
+                            </div>
+                            <div class="form-check mb-2 d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="yellow" name="color" value="yellow">
+                                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #EAB308;"></div>
+                                <label class="form-check-label" for="yellow">옐로우</label>
+                            </div>
+                            <div class="form-check mb-2 d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="navy" name="color" value="navy">
+                                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #1E3A8A;"></div>
+                                <label class="form-check-label" for="navy">네이비</label>
+                            </div>
+                            <div class="form-check mb-2 d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="green" name="color" value="green">
+                                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #10B981;"></div>
+                                <label class="form-check-label" for="green">그린</label>
+                            </div>
+                            <div class="form-check mb-2 d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="pink" name="color" value="pink">
+                                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #EC4899;"></div>
+                                <label class="form-check-label" for="pink">핑크</label>
+                            </div>
+                            <div class="form-check mb-3 d-flex align-items-center">
+                                <input class="form-check-input me-2" type="checkbox" id="blue" name="color" value="blue">
+                                <div class="rounded-circle me-2" style="width: 20px; height: 20px; background-color: #3B82F6;"></div>
+                                <label class="form-check-label" for="blue">블루</label>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-secondary btn-sm flex-fill" data-bs-toggle="dropdown">취소</button>
+                                <button type="button" class="btn btn-dark btn-sm flex-fill" data-bs-toggle="dropdown">확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button"
+                                id="brandDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-tag"></i> 브랜드
+                        </button>
+                        <div class="dropdown-menu p-3" style="min-width: 250px; max-height: 400px; overflow-y: auto;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="ikea" name="brand" value="ikea">
+                                        <label class="form-check-label" for="ikea">이케아 (IKEA)</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="muji" name="brand" value="muji">
+                                        <label class="form-check-label" for="muji">무인양품 (MUJI)</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="hanssem" name="brand" value="hanssem">
+                                        <label class="form-check-label" for="hanssem">한샘</label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="hay" name="brand" value="hay">
+                                        <label class="form-check-label" for="hay">HAY</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-secondary btn-sm flex-fill" data-bs-toggle="dropdown">취소</button>
+                                <button type="button" class="btn btn-dark btn-sm flex-fill" data-bs-toggle="dropdown">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 오른쪽 정렬 -->
+                <div class="dropdown ms-auto">
+                    <button class="btn btn-light dropdown-toggle" type="button"
+                            id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-funnel"></i> 정렬
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">인기순</a></li>
+                        <li><a class="dropdown-item" href="#">낮은가격순</a></li>
+                        <li><a class="dropdown-item" href="#">높은가격순</a></li>
+                        <li><a class="dropdown-item" href="#">신상품순</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- section_2: 제품 그리드 -->
+<div class="section_2 py-4" style="background-color: #fff;">
+    <div class="container-fluid">
+        <!-- 제품 그리드 (5x5) -->
+        <div class="product-grid mb-4">
+        {% for product in product_list.items %}
+        <article class="product-card" data-id="{{ product.id }}">
+          <div class="product-image position-relative">
+            <img src="{{ product.image_url }}"
+                 alt="{{ product.name }}"
+                 loading="lazy"
+                 onerror="this.src='/static/img/placeholder.png'">
+            <!-- 하트 아이콘 -->
+            <button class="btn btn-link position-absolute p-0 border-0 wishlist-btn"
+                    style="bottom: 10px; right: 10px; background-color: rgba(255, 255, 255, 0.9); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"
+                    data-product-id="{{ product.id }}"
+                    onclick="toggleWishlist(event, {{ product.id }})">
+              <i class="bi bi-heart" style="font-size: 18px; color: #333;"></i>
+            </button>
+          </div>
+            <div class="product-info">
+                <p class="product-brand">{{ product.brand }}</p>
+                <h3 class="product-name">{{ product.name }}</h3>
+                <p class="product-price">{{ "{:,}".format(product.price) }}원</p>
+            </div>
+        </article>
+        {% endfor %}
+        </div>
+
+        <!-- 페이지네이션 (최대 8개 페이지 번호) -->
+        <div class="pagination-wrapper mt-4 mb-5">
+            <div class="pagination">
+            <!-- 이전 페이지 -->
+            {% if product_list.has_prev %}
+            <a href="?page={{ product_list.prev_num }}" class="pagination-btn">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+            {% else %}
+            <button class="pagination-btn" disabled>
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            {% endif %}
+
+            <!-- 페이지 번호 -->
+            {% for page_num in product_list.iter_pages(left_edge=1, right_edge=1, left_current=3, right_current=3) %}
+                {% if page_num %}
+                    {% if page_num == product_list.page %}
+                    <button class="pagination-btn active">{{ page_num }}</button>
+                    {% else %}
+                    <a href="?page={{ page_num }}" class="pagination-btn">{{ page_num }}</a>
+                    {% endif %}
+                {% else %}
+                <span class="pagination-btn" style="border: none; background: none;">...</span>
+                {% endif %}
+            {% endfor %}
+
+            <!-- 다음 페이지 -->
+            {% if product_list.has_next %}
+            <a href="?page={{ product_list.next_num }}" class="pagination-btn">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+            {% else %}
+            <button class="pagination-btn" disabled>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}
+{% block script %}
+<script src="{{ url_for('static', filename='sub.js') }}"></script>
+
+    <!-- section_2 -->
+    <div class="section_2">
+        <div class="section_2_1"></div>
+        <div class="section_2_2"></div>
+        <div class="section_2_3"></div>
+        <div class="section_2_4"></div>
+    </div>
+    </body>
+
+{% endblock %}
+{% block script %}
+{% endblock %}
+>>>>>>> upstream/main

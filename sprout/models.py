@@ -1,13 +1,20 @@
 from sprout import db
+<<<<<<< HEAD
 from datetime import datetime
 
 #회원 모델 생성
 class User(db.Model):
     __tablename__ = 'user'
+=======
+
+#회원 모델 생성
+class User(db.Model):
+>>>>>>> upstream/main
     id=db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False) #필수 입력 아니면 nullable=True 가능
+<<<<<<< HEAD
     phone = db.Column(db.String(20), nullable=True)
     # address = db.Column(db.String(300)) #배송지 필요할 때 추가
     created_date = db.Column(db.DateTime, nullable=False, default=datetime.now)
@@ -29,5 +36,7 @@ class CartItem(db.Model):
 
     def __repr__(self):
         return f'<CartItem user_id={self.user_id} product_id={self.product_id}>'
+=======
+>>>>>>> upstream/main
 
 

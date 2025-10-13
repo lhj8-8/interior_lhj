@@ -1,0 +1,127 @@
+<head>
+    <style>
+        /* 슬라이드 토글 버튼 */
+        .slide-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: rgba(0, 0, 0, 0.7);
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* 오른쪽 슬라이드 패널 */
+        .slide-panel {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100vh;
+            background: white;
+            border-left: 1px solid #ddd;
+            transition: right 0.3s ease;
+            z-index: 1000;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide-panel.active {
+            right: 0;
+        }
+
+        .slide-panel-content {
+            padding: 2rem;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        /* 오버레이 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* 메뉴 링크 스타일 */
+        .slide-panel-content ul li {
+            list-style: none;
+            margin: 10px 0;
+        }
+
+        .slide-panel-content ul li a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        .slide-panel-content ul li a:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 슬라이드 토글 버튼 -->
+    <button class="slide-toggle" id="slideToggle">메뉴</button>
+
+    <!-- 오버레이 -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- 오른쪽 슬라이드 패널 -->
+    <div class="slide-panel" id="slidePanel">
+        <div class="slide-panel-content">
+            <h2>슬라이드 패널</h2>
+            <p>여기에 원하는 내용을 넣으세요.</p>
+            <ul>
+                <li><a href="auth/login.html">메뉴 1</a></li>
+                <li><a href="page2.html">메뉴 2</a></li>
+                <li><a href="page3.html">메뉴 3</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const slideToggle = document.getElementById('slideToggle');
+        const slidePanel = document.getElementById('slidePanel');
+        const overlay = document.getElementById('overlay');
+
+        let isPanelOpen = false;
+
+        // 슬라이드 패널 토글
+        function togglePanel() {
+            isPanelOpen = !isPanelOpen;
+
+            slidePanel.classList.toggle('active', isPanelOpen);
+            overlay.classList.toggle('active', isPanelOpen);
+        }
+
+        // 이벤트 리스너
+        slideToggle.addEventListener('click', togglePanel);
+        overlay.addEventListener('click', togglePanel);
+
+        // ESC 키로 패널 닫기
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isPanelOpen) {
+                togglePanel();
+            }
+        });
+    </script>
+</body>
+</html>
