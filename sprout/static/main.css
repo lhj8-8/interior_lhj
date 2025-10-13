@@ -1,0 +1,449 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+    background-color: transparent;
+    z-index: 1000;
+    padding: 0 80px;
+    transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: rgba(245, 235, 220, 0.9);
+}
+
+.header:hover {
+    background-color: rgba(245, 235, 220, 0.9);
+}
+
+/* 헤더 내부 레이아웃 */
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* 좌측: 네비게이션 */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex: 1;
+}
+
+.header-left .nav-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+/* 중앙: 로고 */
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 20px;
+    width: auto;
+    display: block;
+}
+
+/* 우측: 아이콘 메뉴 */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.header-icon i {
+    font-size: 22px;
+}
+
+/* =========================================
+   OFFCANVAS (슬라이드 패널)
+========================================= */
+.clicks a {
+    text-decoration: none;
+    color: black;
+}
+
+.clicks button:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/* 슬라이드 패널 크기 및 스타일 */
+.offcanvas {
+    width: 500px;
+    z-index: 1050;
+}
+
+body.offcanvas-open {
+    overflow: auto;
+    padding-right: 0;
+}
+
+.offcanvas-header,
+.offcanvas-body {
+    background-color: white;
+    color: black;
+}
+
+/* =========================================
+   SECTION 1 (메인 캐러셀)
+========================================= */
+#carouselExampleDark {
+    height: 565px;
+    margin: 0 auto;
+}
+
+#carouselExampleDark img {
+    width: 100%;
+    height: 565px;
+    object-fit: cover;
+}
+
+/* =========================================
+   SECTION 2 (전/후 슬라이드)
+========================================= */
+.section_2 {
+    position: relative;
+    width: 1366px;
+    height: 768px;
+    margin: 0 auto;
+}
+
+.image-slider-container {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* 내부 래퍼 */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+}
+
+.slider-wrapper:active {
+    cursor: grabbing;
+}
+
+/* 이미지 */
+.before-image,
+.after-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.after-image {
+    clip-path: inset(0 50% 0 0);
+}
+
+/* 구분선/핸들 */
+.slider-divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background: #fff;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    z-index: 10;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+<polyline points='10,6 5,12 10,18' stroke='%23555' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+<polyline points='14,6 19,12 14,18' stroke='%23555' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+</svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px 26px;
+}
+
+/* =========================================
+   SECTION 2-2 (SUV 슬라이드)
+========================================= */
+.suvslide {
+    width: 1520px;
+    height: 780px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.parallax-section {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.image-row {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+    padding: 0 20px;
+}
+
+.image-card {
+    min-width: 350px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================
+   SECTION 3
+========================================= */
+.section_3 {
+    display: flex;
+    width: 1366px;
+    height: 768px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.section_3 video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+.footer {
+    margin: 0 auto;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.footer-container {
+    width: 1500px;
+    margin: 0 auto;
+    padding: 5px 50px 15px 50px;
+}
+
+/* 상단 섹션 */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.footer-brand {
+    flex: 0 0 200px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #888;
+    border-radius: 4px;
+}
+
+/* 링크 영역 */
+.footer-links {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #333;
+}
+
+/* 컬럼 레이아웃 */
+.footer-columns {
+    display: flex;
+    gap: 100px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.footer-column {
+    min-width: 120px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #eee;
+}
+
+/* 하단 영역 */
+.footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-info {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .header-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .header-left,
+    .header-right {
+        flex: auto;
+    }
+
+    .header-center {
+        order: -1;
+        flex: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
