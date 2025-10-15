@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% block style %}
+<!--custom css-->
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+{% endblock %}
+
+{% block content %}
+<body style="background-color: #000000">
+<!-- section_1 -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide container-fluid">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{{ url_for('static', filename='image/main_1.png') }}"
+                 class="d-block w-100" alt="slider1">
+<!--            <div class="carousel-caption d-none d-md-block text-white">-->
+<!--                <h5>High-end Brand</h5>-->
+<!--                <p>하이엔드 브랜드들이 먼저 선택한 공간 파트너</p>-->
+<!--            </div>-->
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="{{ url_for('static', filename='image/main_2.jpeg') }}"
+                 class="d-block w-100" alt="slider2">
+<!--            <div class="carousel-caption d-none d-md-block text-white">-->
+<!--                <h5>High-end Home</h5>-->
+<!--                <p>4000개 이상의 프리미엄 주거 사례를 디자인한 경험과 실력</p>-->
+<!--            </div>-->
+        </div>
+
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='image/main_3.png') }}"
+                 class="d-block w-100" alt="slider3">
+<!--            <div class="carousel-caption d-none d-md-block text-white">-->
+<!--                <h5>High-end Space</h5>-->
+<!--                <p>700평 사무실부터 감각적인 브랜드 공간까지 상업공간 시공도 GAGU</p>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="section_tb">
+    <div style="background-color: #000000; padding: 40px 60px; margin: 80px;">
+        <h2 style="color: white; margin: 20px; text-align: center;">About GAGU</h2>
+        <br>
+        <p style="color: white; line-height: 1.6; text-align: center; max-width: 800px; margin: 0 auto;">
+            GAGU는 하이엔드 전문 컨설턴트 및 디자이너가 전문 지식과 기술을 바탕으로 고객님의 취향, 예산, 라이프 스타일에 맞는 '나'만의 공간 디자인을 제안 드리며, 실사와 같은 완성도 높은 3D
+            시안을 통해 인테리어 시공과 가구 구매 과정의 모든 어려움을 해결합니다. 스프라우트와 함께 오늘부로 완전히 새로운 내 공간을 만나보세요.
+        </p>
+    </div>
+</div>
+
+<!-- section_2 -->
+<div class="section_2">
+    <div class="image-slider-container">
+        <div class="slider-wrapper" style="background-color: #000000" id="sliderWrapper">
+            <!-- Before 이미지 (빈 방) -->
+            <img src="{{ url_for('static', filename='image/after.png') }}" alt="After" class="before-image">
+
+            <!-- After 이미지 (가구가 있는 방) -->
+            <img src="{{ url_for('static', filename='image/before.png') }}" alt="Before" class="after-image"
+                 id="afterImage">
+
+            <!-- 슬라이더 구분선 -->
+            <div class="slider-divider" id="sliderDivider"></div>
+
+            <!-- 슬라이더 핸들 -->
+            <div class="slider-handle" id="sliderHandle"></div>
+        </div>
+    </div>
+</div>
+
+<div class="section_tb2">
+    <div style="background-color: #000000; padding: 40px 60px; margin: 80px;">
+        <h2 style="color: white; margin: 20px; text-align: center;">인테리어의 새로운 경험</h2>
+        <br>
+        <p style="color: white; line-height: 1.6; text-align: center; max-width: 800px; margin: 0 auto;">
+            AI 기술을 활용하여 당신의 공간을 완벽하게 변화시켜보세요. <br>
+            빈 방에서 시작하여 원하는 스타일의 인테리어를 미리 확인할 수 있습니다.
+        </p>
+    </div>
+</div>
+
+<!-- suvslide -->
+<div class="suvslide">
+    <!-- 첫 번째 행 (왼쪽으로 이동) -->
+    <div class="parallax-section">
+        <div class="image-row" id="row1">
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/interior_1.png') }}" alt="After" class="before-image">
+
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/interior_1.png') }}"
+                     alt="Kitchen 1">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu1.jpg') }}"
+                     alt="Bedroom 1">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu2.jpg') }}"
+                     alt="Dining 1">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu3.jpg') }}"
+                     alt="Office 1">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu4.jpg') }}"
+                     alt="Bathroom 1">
+            </div>
+        </div>
+    </div>
+
+    <!-- 두 번째 행 (오른쪽으로 이동) -->
+    <div class="parallax-section">
+        <div class="image-row" id="row2">
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu5.jpg') }}"
+                     alt="Living Room 2">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu6.jpg') }}"
+                     alt="Kitchen 2">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu7.jpg') }}"
+                     alt="Bedroom 2">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu8.jpg') }}"
+                     alt="Dining 2">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu9.jpg') }}"
+                     alt="Office 2">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu10.jpg') }}"
+                     alt="Bathroom 2">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 세 번째 행 (왼쪽으로 이동) -->
+    <div class="parallax-section">
+        <div class="image-row" id="row3">
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu11.jpg') }}"
+                     alt="Living Room 3">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu12.jpg') }}"
+                     alt="Kitchen 3">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu13.jpg') }}"
+                     alt="Bedroom 3">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu14.jpg') }}"
+                     alt="Dining 3">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu15.jpg') }}"
+                     alt="Office 3">
+            </div>
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='image/gagu10.jpg') }}"
+                     alt="Bathroom 3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section_tb3">
+    <div style="background-color: #000000; padding: 40px 60px; margin: -20px 0 50px 0;">
+        <h4 style="color: white; margin: 20px; text-align: center;">Introduction Video of GAGU</h4>
+    </div>
+</div>
+
+{#section_3#}
+<div class="section_3">
+    <video autoplay loop muted playsinline>
+        <source src="{{ url_for('static', filename='video/gagu_ad.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+</body>
+{% endblock %}
+
+{% block scripts %}
+<!--custom js-->
+<script src="{{ url_for('static', filename='js.js') }}"></script>
+{% endblock %}
