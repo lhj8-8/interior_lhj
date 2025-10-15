@@ -1,0 +1,778 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "brand": "콜드 포그",
+      "name": "ROTATE EASY CHAIR _ 블루 체크",
+      "price": 902500,
+      "description": "블루 체크 패턴의 회전 이지 체어로 포인트 인테리어와 편안한 착석감을 제공합니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/31386/cover-image/pn20240520001543_9.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 2,
+      "brand": "콜드 포그",
+      "name": "CHAIR _ 블랙 스트라이프",
+      "price": 405000,
+      "description": "블랙 스트라이프 패브릭이 돋보이는 체어로 모던한 공간 연출에 적합합니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/31369/cover-image/20240519172425_3.png",
+      "style": "모던"
+    },
+    {
+      "id": 3,
+      "brand": "브리타 스웨덴",
+      "name": "루스 매트 스톤 (2size)",
+      "price": 163000,
+      "description": "자연스러운 스톤 텍스처의 매트로 2가지 사이즈 선택이 가능합니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/34102/cover-image/3png20240724154836_10.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 4,
+      "brand": "오도코펜하겐(가구/조명)",
+      "name": "코 체어 크롬 / 오크",
+      "price": 728000,
+      "description": "크롬 프레임과 오크 좌판의 조화가 돋보이는 코 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/33037/cover-image/png20240716205001_3.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 5,
+      "brand": "콜드 포그",
+      "name": "NET TABLE _ 100",
+      "price": 2160000,
+      "description": "네트 구조가 특징인 100 사이즈 테이블로 미니멀한 공간에 어울립니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/31365/cover-image/10020240519171557_7.png",
+      "style": "모던"
+    },
+    {
+      "id": 6,
+      "brand": "브리타 스웨덴",
+      "name": "게르다 매트 블루 (5size)",
+      "price": 147000,
+      "description": "산뜻한 블루 컬러의 게르다 매트, 5가지 사이즈로 다양한 공간에 적용됩니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/34098/cover-image/pn20240724153606_4.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 7,
+      "brand": "엘엔씨스텐달",
+      "name": "아르노 체어_ 네이비",
+      "price": 302400,
+      "description": "네이비 패브릭과 안정적인 착석감을 갖춘 아르노 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19322/cover-image/p20240116104753_4.png",
+      "style": "모던"
+    },
+    {
+      "id": 8,
+      "brand": "뮬러",
+      "name": "KONNEX Standing Shelf",
+      "price": 1132200,
+      "description": "모듈형 디자인의 스탠딩 선반으로 다양한 조합이 가능합니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35091/cover-image/80020240924181206_6.png",
+      "style": "모던"
+    },
+    {
+      "id": 9,
+      "brand": "뮬러",
+      "name": "Stacking Bed Classic, colored",
+      "price": 2390400,
+      "description": "클래식 라인의 컬러드 스태킹 베드로 공간 효율성을 극대화합니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35090/cover-image/1p20240924210552_5.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 10,
+      "brand": "뮬러",
+      "name": "Stacking Bed Classic",
+      "price": 1958400,
+      "description": "심플한 라인의 스태킹 베드 클래식 모델입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35089/cover-image/120240924210440_5.png",
+      "style": "우드"
+    },
+    {
+      "id": 11,
+      "brand": "뮬러",
+      "name": "Stacking Bed Classic, colored 2단",
+      "price": 4780800,
+      "description": "컬러 버전의 2단 스태킹 베드로 좁은 공간에서도 효율적으로 활용됩니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35088/cover-image/pn20240924210314_6.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 12,
+      "brand": "뮬러",
+      "name": "Stacking Bed Classic 2단",
+      "price": 3916800,
+      "description": "클래식 2단 스태킹 베드로 수납과 공간 활용에 유리합니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35087/cover-image/p20240924210005_4.png",
+      "style": "우드"
+    },
+    {
+      "id": 13,
+      "brand": "누키",
+      "name": "FIRST PLUS Desk 120x60",
+      "price": 2412000,
+      "description": "120x60 규격의 퍼스트 플러스 데스크, 안정적인 작업 환경을 제공합니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35086/cover-image/100020240924174149_2.png",
+      "style": "모던"
+    },
+    {
+      "id": 14,
+      "brand": "누키",
+      "name": "Single Bed Dream Base",
+      "price": 2052000,
+      "description": "드림 베이스 싱글 베드로 편안한 수면 환경을 제공합니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35085/cover-image/60020240924202027_10.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 15,
+      "brand": "몰",
+      "name": "moll Tower",
+      "price": 2050000,
+      "description": "수납과 전시가 가능한 몰 타워 선반 시스템입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35084/cover-image/128020240924190600_3.png",
+      "style": "모던"
+    },
+    {
+      "id": 16,
+      "brand": "몰",
+      "name": "moll Cubicmax",
+      "price": 1350000,
+      "description": "대용량 수납이 가능한 큐빅맥스 캐비닛입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35083/cover-image/60020240924185552_7.png",
+      "style": "모던"
+    },
+    {
+      "id": 17,
+      "brand": "몰",
+      "name": "moll Cubic Pad -Spice",
+      "price": 300000,
+      "description": "큐빅 시리즈 전용 패드로 활용도를 높여주는 액세서리입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35082/cover-image/80020240924185251_9.png",
+      "style": "모던"
+    },
+    {
+      "id": 18,
+      "brand": "몰",
+      "name": "moll Cubic",
+      "price": 980000,
+      "description": "콤팩트한 크기의 몰 큐빅 캐비닛입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35081/cover-image/80020240924184451_6.png",
+      "style": "모던"
+    },
+    {
+      "id": 19,
+      "brand": "몰",
+      "name": "S6 Chair Grey",
+      "price": 1350000,
+      "description": "그레이 컬러의 S6 체어로 학습·업무용 인체공학 설계를 갖췄습니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35080/cover-image/80020240924201038_4.png",
+      "style": "모던"
+    },
+    {
+      "id": 20,
+      "brand": "몰",
+      "name": "S6 Chair",
+      "price": 1350000,
+      "description": "장시간 학습이나 업무에 최적화된 인체공학적 의자입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35079/cover-image/80020240924200735_4.png",
+      "style": "모던"
+    },
+    {
+      "id": 21,
+      "brand": "콜드 포그",
+      "name": "CHAIR _ 블랙 스트라이프 (대체 썸네일)",
+      "price": 405000,
+      "description": "블랙 스트라이프 체어의 대체 컷을 대표 이미지로 사용한 항목입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/31369/cover-image/20240519174606_1.png",
+      "style": "모던"
+    },
+    {
+      "id": 22,
+      "brand": "누키",
+      "name": "FIRST PLUS Desk 140x70",
+      "price": 2690000,
+      "description": "140x70 고정형 데스크. 와이드 작업/학습에 적합.",
+      "image_url": "https://static.interiorteacher.com/mall/product/35086/cover-image/100020240924174149_2.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 23,
+      "brand": "오도코펜하겐(가구/조명)",
+      "name": "코 체어 — Chrome / Walnut",
+      "price": 758000,
+      "description": "크롬 프레임 + 월넛 좌판 코 체어.",
+      "image_url": "https://static.interiorteacher.com/mall/product/33037/cover-image/png20240716205001_3.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 24,
+      "brand": "오도코펜하겐(가구/조명)",
+      "name": "코 체어 — Black Frame / Oak",
+      "price": 728000,
+      "description": "블랙 프레임 + 오크 좌판 조합.",
+      "image_url": "https://static.interiorteacher.com/mall/product/33037/cover-image/png20240716205557_4.png",
+      "style": "우드"
+    },
+    {
+      "id": 25,
+      "brand": "콜드 포그",
+      "name": "NET TABLE _ 120",
+      "price": 2490000,
+      "description": "네트 테이블 120 사이즈. 미니멀 구조미.",
+      "image_url": "https://static.interiorteacher.com/mall/product/31365/cover-image/10020240519171557_7.png",
+      "style": "모던"
+    },
+    {
+      "id": 26,
+      "brand": "콜드 포그",
+      "name": "NET TABLE _ 80",
+      "price": 1890000,
+      "description": "네트 테이블 80 사이즈. 소형 공간 적합.",
+      "image_url": "https://static.interiorteacher.com/mall/product/31365/cover-image/20240519171614_7.png",
+      "style": "모던"
+    },
+    {
+      "id": 27,
+      "brand": "엘엔씨스텐달",
+      "name": "아르노 체어_ 네이비 — Wood Leg",
+      "price": 329000,
+      "description": "네이비 패브릭 + 우드 레그 조합.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19322/cover-image/p20240116104753_4.png",
+      "style": "우드"
+    },
+    {
+      "id": 28,
+      "brand": "엘엔씨스텐달",
+      "name": "아르노 체어_ 네이비 — Cushion Plus",
+      "price": 342000,
+      "description": "좌판/등판 쿠션 강화형.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19322/cover-image/Maskgro20240116104917_10.png",
+      "style": "내추럴"
+    },
+     {
+      "id": 29,
+      "brand": "무토",
+      "name": "70/70 테이블 170",
+      "price": 2771000,
+      "description": "170cm 사이즈의 미니멀한 디자인 다이닝 테이블입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/34017/cover-image/170png20240728224434_1.png",
+      "style": "모던"
+    },
+    {
+      "id": 30,
+      "brand": "브리온베가",
+      "name": "토템 rr-231 포스터 화이트 A1 실버 프레임",
+      "price": 300000,
+      "description": "브리온베가의 아이코닉한 토템 디자인을 포스터로 제작한 제품입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/32670/cover-image/pn20240529104939_2.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 31,
+      "brand": "브리온베가",
+      "name": "토템 rr-231 포스터 화이트 A1 우드 프레임",
+      "price": 440000,
+      "description": "우드 프레임으로 제작된 브리온베가 토템 포스터입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/32669/cover-image/png20240529104357_1.png",
+      "style": "우드"
+    },
+    {
+      "id": 32,
+      "brand": "브리온베가",
+      "name": "토템 rr231 블랙",
+      "price": 35900000,
+      "description": "블랙 컬러의 브리온베가 토템 오리지널 제품입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/32668/cover-image/120240529100812_8.png",
+      "style": "모던"
+    },
+    {
+      "id": 33,
+      "brand": "브리온베가",
+      "name": "토템 rr231 화이트",
+      "price": 33900000,
+      "description": "화이트 컬러의 브리온베가 토템 오리지널 제품입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/32667/cover-image/120240529094905_7.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 34,
+      "brand": "플로스",
+      "name": "타치아 스몰",
+      "price": 2202000,
+      "description": "플로스의 아이코닉한 타치아 조명 스몰 사이즈입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/22721/cover-image/20231204143327_5.png",
+      "style": "모던"
+    },
+    {
+      "id": 35,
+      "brand": "아르떼미데",
+      "name": "톨로메오 미니 테이블",
+      "price": 630000,
+      "description": "아르떼미데의 베스트셀러 톨로메오 미니 테이블 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/22670/cover-image/회색png20231129164818_6.png",
+      "style": "모던"
+    },
+    {
+      "id": 36,
+      "brand": "브리온베가",
+      "name": "라디오포노그라포 rr-226 화이트",
+      "price": 26900000,
+      "description": "브리온베가의 클래식 라디오 포노그라프 화이트 버전입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19579/cover-image/1png20240422170218_1.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 37,
+      "brand": "엘엔씨스텐달",
+      "name": "컴백 체어 블랙",
+      "price": 261800,
+      "description": "블랙 컬러의 인체공학적 컴백 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19330/cover-image/p20240116093954_7.png",
+      "style": "모던"
+    },
+    {
+      "id": 38,
+      "brand": "엘엔씨스텐달",
+      "name": "아르노 체어 블랙",
+      "price": 323400,
+      "description": "블랙 패브릭의 아르노 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19323/cover-image/p20240116104518_5.png",
+      "style": "모던"
+    },
+    {
+      "id": 39,
+      "brand": "보더바",
+      "name": "리벳 락커 블랙 루프트한자 클래식 윈도우",
+      "price": 4810000,
+      "description": "루프트한자 클래식 디자인의 윈도우형 리벳 락커입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/17464/cover-image/20240606230440_9.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 40,
+      "brand": "보더바",
+      "name": "보이저",
+      "price": 3300000,
+      "description": "보더바의 프리미엄 트래블 컬렉션 보이저입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/17229/cover-image/p20240606230608_8.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 41,
+      "brand": "알리아스",
+      "name": "세콘다 암체어 602",
+      "price": 2550000,
+      "description": "알리아스의 세콘다 암체어 602 모델입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/15335/cover-image/2349SEC20230407224537_10.png",
+      "style": "모던"
+    },
+    {
+      "id": 42,
+      "brand": "알리아스",
+      "name": "프레임테이블 160F 495",
+      "price": 4037500,
+      "description": "160cm 프레임 테이블 495 마감 옵션입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/2348FRA_2022080514252566210048.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 43,
+      "brand": "알리아스",
+      "name": "스파게티 암체어 109",
+      "price": 1139000,
+      "description": "독특한 스파게티 디자인의 암체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/2343SPA_2022080513510183310054.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 44,
+      "brand": "스펙트럼",
+      "name": "페이퍼백 월시스템 30cm 화이트",
+      "price": 900000,
+      "description": "벽면 수납 시스템 페이퍼백 30cm 화이트입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/23904/cover-image/1png20231215170310_10.png",
+      "style": "모던"
+    },
+    {
+      "id": 45,
+      "brand": "텍타",
+      "name": "M1-2",
+      "price": 8800000,
+      "description": "텍타의 클래식 M1-2 라운지 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/23827/cover-image/p20231215125010_2.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 46,
+      "brand": "마르티넬리 루체",
+      "name": "피피스트렐로",
+      "price": 2979000,
+      "description": "박쥐 날개 형태의 독특한 피피스트렐로 펜던트입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/22743/cover-image/1png20231206142525_9.png",
+      "style": "모던"
+    },
+    {
+      "id": 47,
+      "brand": "알리아스",
+      "name": "스파게티 암레스트 체어 131",
+      "price": 892500,
+      "description": "암레스트가 추가된 스파게티 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/2344SPA_2022080513545952280019.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 48,
+      "brand": "텍타",
+      "name": "B40 블랙 에디션",
+      "price": 2600000,
+      "description": "텍타의 B40 블랙 에디션 사이드 테이블입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/23809/cover-image/p20231208153538_2.png",
+      "style": "모던"
+    },
+    {
+      "id": 49,
+      "brand": "마지스",
+      "name": "퍼피 화이트",
+      "price": 144000,
+      "description": "강아지 모양의 귀여운 퍼피 오브제 화이트입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/21785/cover-image/가이드png20231019151012_5.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 50,
+      "brand": "올루체",
+      "name": "쿠페 테이블 램프 블랙",
+      "price": 1700000,
+      "description": "블랙 컬러의 올루체 쿠페 테이블 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/21300/cover-image/블랙png20231027150619_7.png",
+      "style": "모던"
+    },
+    {
+      "id": 51,
+      "brand": "올루체",
+      "name": "쿠페 테이블 램프 화이트",
+      "price": 1700000,
+      "description": "화이트 컬러의 올루체 쿠페 테이블 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/21299/cover-image/화이트png20231027151130_4.png",
+      "style": "모던"
+    },
+    {
+      "id": 52,
+      "brand": "마지스",
+      "name": "퍼피 달마시안",
+      "price": 165600,
+      "description": "달마시안 패턴의 퍼피 오브제입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/0014_2022070807440537560084.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 53,
+      "brand": "드세데",
+      "name": "DS-707/01 블랙",
+      "price": 8330000,
+      "description": "드세데의 프리미엄 소파 DS-707/01 블랙입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/23951/cover-image/7png20231217232655_1.png",
+      "style": "모던"
+    },
+    {
+      "id": 54,
+      "brand": "텍타",
+      "name": "M21",
+      "price": 7900000,
+      "description": "텍타의 M21 라운지 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/23830/cover-image/p20231215130904_2.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 55,
+      "brand": "올루체",
+      "name": "쿠페 플로어 램프 블랙",
+      "price": 2100000,
+      "description": "블랙 컬러의 쿠페 플로어 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/21302/cover-image/블랙png20231027162117_9.png",
+      "style": "모던"
+    },
+    {
+      "id": 56,
+      "brand": "올루체",
+      "name": "쿠페 플로어 램프 화이트",
+      "price": 2100000,
+      "description": "화이트 컬러의 쿠페 플로어 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/21301/cover-image/화이트png20231027161447_1.png",
+      "style": "모던"
+    },
+    {
+      "id": 57,
+      "brand": "아웃",
+      "name": "프리드리히 미러",
+      "price": 1520000,
+      "description": "아웃의 프리드리히 월 미러입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/Friedric_2022080504222436200095.jpg",
+      "style": "내추럴"
+    },
+    {
+      "id": 58,
+      "brand": "앵글포이즈",
+      "name": "오리지널 1227 데스크 램프 도브 그레이",
+      "price": 460000,
+      "description": "도브 그레이 컬러의 오리지널 1227 데스크 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/20828/cover-image/222222220230825164556_4.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 59,
+      "brand": "앵글포이즈",
+      "name": "오리지널 1227 데스크 램프 리넨 화이트",
+      "price": 460000,
+      "description": "리넨 화이트 컬러의 오리지널 1227 데스크 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/20828/cover-image/3333333320230825164409_5.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 60,
+      "brand": "포스카리니",
+      "name": "트위기 플로어 램프 블랙",
+      "price": 2770000,
+      "description": "블랙 컬러의 트위기 플로어 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/21308/cover-image/트위기블랙p20231017141756_5.png",
+      "style": "모던"
+    },
+    {
+      "id": 61,
+      "brand": "포스카리니",
+      "name": "트위기 플로어 램프 화이트",
+      "price": 2770000,
+      "description": "화이트 컬러의 트위기 플로어 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/21307/cover-image/트위기화이트20231017100619_3.png",
+      "style": "모던"
+    },
+    {
+      "id": 62,
+      "brand": "앵글포이즈",
+      "name": "타입 75 데스크 램프 알파인 화이트",
+      "price": 390000,
+      "description": "알파인 화이트 컬러의 타입 75 데스크 램프입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/20869/cover-image/type7520230828143544_10.png",
+      "style": "모던"
+    },
+    {
+      "id": 63,
+      "brand": "엘엔씨스텐달",
+      "name": "컴백 체어 옐로우",
+      "price": 244800,
+      "description": "옐로우 컬러의 컴백 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19329/cover-image/20240116094027_4.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 64,
+      "brand": "아웃",
+      "name": "엑스 체어 블랙",
+      "price": 780000,
+      "description": "블랙 컬러의 엑스 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/15322/cover-image/100020240129151858_2.png",
+      "style": "모던"
+    },
+    {
+      "id": 65,
+      "brand": "엘엔씨스텐달",
+      "name": "컴백 체어 화이트",
+      "price": 261800,
+      "description": "화이트 컬러의 컴백 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/15043/cover-image/p20240116094200_1.png",
+      "style": "모던"
+    },
+    {
+      "id": 66,
+      "brand": "아고라이팅",
+      "name": "핀치펜던트 블랙",
+      "price": 913000,
+      "description": "블랙 컬러의 핀치 펜던트 조명입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/14556/cover-image/sm1png20230520100254_2.png",
+      "style": "모던"
+    },
+    {
+      "id": 67,
+      "brand": "앱톤",
+      "name": "투오브어스 4 새틴 화이트",
+      "price": 250000,
+      "description": "새틴 화이트 컬러의 투오브어스 4 조명입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/18568/cover-image/18568th20230904105317_8.png",
+      "style": "모던"
+    },
+    {
+      "id": 68,
+      "brand": "보더바",
+      "name": "리벳 락커 뉴 2023 리미티드 파우더",
+      "price": 3280000,
+      "description": "2023 리미티드 에디션 파우더 컬러 리벳 락커입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/22296/cover-image/pn20240606230406_10.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 69,
+      "brand": "온다레타",
+      "name": "진저 로우 우드 테이블 H450",
+      "price": 1475000,
+      "description": "H450 높이의 진저 로우 우드 테이블입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19778/cover-image/19778th20230904101931_2.png",
+      "style": "우드"
+    },
+    {
+      "id": 70,
+      "brand": "온다레타",
+      "name": "바이 어저스터블 스위블 스틸 체어",
+      "price": 929000,
+      "description": "캐스터 포함 어저스터블 스위블 스틸 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19678/cover-image/p20240109170250_7.png",
+      "style": "모던"
+    },
+    {
+      "id": 71,
+      "brand": "소노로",
+      "name": "플래티넘 턴테이블 화이트",
+      "price": 1125000,
+      "description": "화이트 컬러의 플래티넘 턴테이블입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/19237/cover-image/whiteth20230624180039_9.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 72,
+      "brand": "헬러",
+      "name": "비넬리 벤치 라지",
+      "price": 2290000,
+      "description": "라지 사이즈의 비넬리 벤치입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30167/cover-image/p20240222101313_9.png",
+      "style": "모던"
+    },
+    {
+      "id": 73,
+      "brand": "헬러",
+      "name": "벨리니 체어",
+      "price": 620000,
+      "description": "헬러의 벨리니 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30166/cover-image/p20240222100917_2.png",
+      "style": "모던"
+    },
+    {
+      "id": 74,
+      "brand": "헬러",
+      "name": "게리 레프트 트위스트 큐브",
+      "price": 910000,
+      "description": "게리 레프트 트위스트 큐브 사이드 테이블입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30165/cover-image/png20240222100242_3.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 75,
+      "brand": "헬러",
+      "name": "게리 이지 체어",
+      "price": 2600000,
+      "description": "게리 이지 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30164/cover-image/p20240221175909_3.png",
+      "style": "미드센추리"
+    },
+    {
+      "id": 76,
+      "brand": "헬러",
+      "name": "게리 커피 테이블",
+      "price": 2340000,
+      "description": "게리 커피 테이블입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30163/cover-image/p20240221175429_5.png",
+      "style": "모던"
+    },
+    {
+      "id": 77,
+      "brand": "헬러",
+      "name": "게리 벤치",
+      "price": 1670000,
+      "description": "게리 벤치입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30162/cover-image/p20240221175007_1.png",
+      "style": "모던"
+    },
+    {
+      "id": 78,
+      "brand": "드리아데",
+      "name": "시시 암체어 화이트",
+      "price": 420000,
+      "description": "화이트 컬러의 시시 암체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30161/cover-image/120240221174333_2.png",
+      "style": "모던"
+    },
+    {
+      "id": 79,
+      "brand": "드리아데",
+      "name": "시시 암체어 다크 그레이",
+      "price": 420000,
+      "description": "다크 그레이 컬러의 시시 암체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30160/cover-image/p20240221174130_1.png",
+      "style": "모던"
+    },
+    {
+      "id": 80,
+      "brand": "드리아데",
+      "name": "시시 체어 그린",
+      "price": 350000,
+      "description": "그린 컬러의 시시 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30159/cover-image/pn20240221172948_10.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 81,
+      "brand": "드리아데",
+      "name": "시시 체어 핑크",
+      "price": 350000,
+      "description": "핑크 컬러의 시시 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30158/cover-image/p20240221172722_2.png",
+      "style": "내추럴"
+    },
+    {
+      "id": 82,
+      "brand": "드리아데",
+      "name": "시시 체어 레드",
+      "price": 350000,
+      "description": "레드 컬러의 시시 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30157/cover-image/png20240221172524_8.png",
+      "style": "모던"
+    },
+    {
+      "id": 83,
+      "brand": "드리아데",
+      "name": "시시 체어 다크 그레이",
+      "price": 350000,
+      "description": "다크 그레이 컬러의 시시 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30156/cover-image/20240221172126_2.png",
+      "style": "모던"
+    },
+    {
+      "id": 84,
+      "brand": "드리아데",
+      "name": "핍 암체어 화이트",
+      "price": 470000,
+      "description": "화이트 컬러의 핍 암체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30155/cover-image/p20240221171313_9.png",
+      "style": "모던"
+    },
+    {
+      "id": 85,
+      "brand": "드리아데",
+      "name": "핍 암체어 다크 그레이",
+      "price": 470000,
+      "description": "다크 그레이 컬러의 핍 암체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30154/cover-image/p20240221171103_10.png",
+      "style": "모던"
+    },
+    {
+      "id": 86,
+      "brand": "드리아데",
+      "name": "핍 체어 카네이션",
+      "price": 340000,
+      "description": "카네이션 컬러의 핍 체어입니다.",
+      "image_url": "https://static.interiorteacher.com/mall/product/30153/cover-image/PIPE20240221161017_9.png",
+      "style": "내추럴"
+    }
+  ]
+}
